@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply
+      /* Sizing */
+      max-w-[100vw]
+      /* Layout */
+      overflow-x-hidden
+      overscroll-y-none
+      /* Background */
+      bg-white
+      /* Interactivity */
+      !scroll-smooth;
+  }
+
+  body {
+    @apply
+      /* Typography */
+      text-zinc-900
+      antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply
+      /* Layout */
+      box-border
+      /* Spacing */
+      p-0
+      m-0;
+  }
+
+  *:focus {
+    @apply
+      /* Border */
+      outline-none;
+  }
+
+  a {
+    @apply
+      /* Typography */
+      text-inherit
+      no-underline;
+  }
+
+  /* Typography */
+
+  @font-face {
+    font-family: Salaryman;
+    src: url(../../public/fonts/Salaryman.ttf);
+  }
+
+  @font-face {
+    font-family: UniNeue thin;
+    src: url(../../public/fonts/uni-neue/UniNeue-Thin.otf);
+  }
+  
+  @font-face {
+    font-family: UniNeue light;
+    src: url(../../public/fonts/uni-neue/UniNeue-Light.otf);
+  }
+
+  @font-face {
+    font-family: UniNeue book;
+    src: url(../../public/fonts/uni-neue/UniNeue-Book.otf);
+  }
+
+  @font-face {
+    font-family: UniNeue regular;
+    src: url(../../public/fonts/uni-neue/UniNeue-Regular.otf);
+  }
+
+  @font-face {
+    font-family: UniNeue bold;
+    src: url(../../public/fonts/uni-neue/UniNeue-Bold.otf);
+  }
+
+  @font-face {
+    font-family: UniNeue heavy;
+    src: url(../../public/fonts/uni-neue/UniNeue-Heavy.otf);
+  }
+
+  @font-face {
+    font-family: UniNeue black;
+    src: url(../../public/fonts/uni-neue/UniNeue-Black.otf);
+  }
+}
