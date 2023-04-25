@@ -43,7 +43,7 @@ export default {
         'unineue-regular': ['UniNeue regular'],
         'unineue-bold': ['UniNeue bold'],
         'unineue-heavy': ['UniNeue heavy'],
-        'unineue-black': ['UniNeue Thin']
+        'unineue-black': ['UniNeue black']
       },
       colors: {
         primary: '#888888' // Taupe Gray

@@ -1,6 +1,3 @@
-// Types
-import type { Language, Translatable } from '../../types/app'
-
 /** Node enviroment mode */
 export const env = process.env.NODE_ENV
 
@@ -11,10 +8,7 @@ export const baseUrl = process.env.HOST
 export const organization = 'D55PSG'
 
 /** The head desciption of the application */
-export const descriptionConfig: Translatable = {
-  es: 'Professional Service Group',
-  en: 'Professional Service Group'
-}
+export const description = 'Professional Service Group'
 
 /** The keyword list of the application */
 export const keywordList = [
@@ -22,8 +16,31 @@ export const keywordList = [
   'd55psg group',
   'd55psg professional service group',
   'professional service group',
-  'd55psg servicios profecionales',
-  'soluciones empresariales'
+  'business consulting',
+  'business consulting services',
+  'consultoria de negocios',
+  'servicios de consultoria de negocios',
+  'business strategy',
+  'business strategy services',
+  'estrategias de negocios',
+  'servicios de estrategias de negocios',
+  'market research',
+  'market research services',
+  'investigacion de mercado',
+  'servicios de investigacion de mercado',
+  'strategic business planning',
+  'strategic business planning services',
+  'planeacion estrategica de negocios',
+  'servicios de planeacion estrategica de negocios',
+  'business consulting',
+  'business consulting services',
+  'asesoria de negocios',
+  'servicios de asesoria de negocios',
+  'business coaching',
+  'business coaching services',
+  'coaching de negocios',
+  'coaching empresarial',
+  'servicios de coaching empresarial'
 ]
 
 /** The keyword list as string */
@@ -69,6 +86,3 @@ export const googleSearchSchema = {
     }
   ]
 }
-
-/** The initial state of the language application */
-export const languageInitialState: Language = 'es'

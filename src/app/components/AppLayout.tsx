@@ -1,14 +1,12 @@
 // Components
 import GSearchSchemaScript from './GSearchSchemaScript'
 import Head from 'next/head'
-// Global store
-import { useLanguageStore } from '../store'
-import { shallow } from 'zustand/shallow'
+import Navbar from '@/components/navigation/Navbar'
 // Config
 import {
   baseUrl,
   coverImageUrl,
-  descriptionConfig,
+  description,
   keywords,
   organization,
   twitter
@@ -17,11 +15,6 @@ import {
 import type { ParentProps } from '../../types/layout'
 
 const AppLayout = ({ children } : ParentProps) => {
-  const { lang } = useLanguageStore(state => ({
-    lang: state.lang
-  }), shallow)
-
-  const description = descriptionConfig[lang]
   const title = `${organization} – ${description}`
 
   return (
@@ -58,6 +51,7 @@ const AppLayout = ({ children } : ParentProps) => {
         <meta name='twitter:site' content={twitter} />
         <meta name='twitter:image' content={coverImageUrl} />
       </Head>
+      <Navbar />
       <main>
         {children}
       </main>

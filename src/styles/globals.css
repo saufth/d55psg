@@ -5,51 +5,33 @@
 @layer base {
   html,
   body {
-    @apply
-      /* Sizing */
-      max-w-[100vw]
-      /* Layout */
-      overflow-x-hidden
-      overscroll-y-none
-      /* Background */
-      bg-white
-      /* Interactivity */
-      !scroll-smooth;
+    @apply max-w-[100vw] overflow-x-hidden overscroll-y-none !scroll-smooth;
   }
 
   body {
-    @apply
-      /* Typography */
-      text-zinc-900
-      antialiased;
+    @apply font-unineue-regular text-zinc-950 antialiased bg-white;
     text-rendering: optimizeLegibility;
   }
 
   *,
   *::before,
   *::after {
-    @apply
-      /* Layout */
-      box-border
-      /* Spacing */
-      p-0
-      m-0;
+    @apply box-border p-0 m-0;
   }
 
   *:focus {
-    @apply
-      /* Border */
-      outline-none;
+    @apply outline-none;
   }
 
   a {
-    @apply
-      /* Typography */
-      text-inherit
-      no-underline;
+    @apply text-inherit no-underline;
   }
 
-  /* Typography */
+  h1 {
+    @apply font-unineue-bold text-3xl md:text-4xl text-zinc-950 tracking-tight leading-tight;
+  }
+
+  /* Fonts */
 
   @font-face {
     font-family: Salaryman;

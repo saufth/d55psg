@@ -1,17 +1,10 @@
-/** Arrow function type without params */
-export type Action<R = void> = () => R
+/** Generic arrow function type */
+export type Action<P = undefined, R = void> = P extends undefined
+  ? () => R
+  : (param: P) => R
 
-/** Arrow function type with params */
-export type ActionParam<P, R = void> = (param: P) => R
-
-/** Used to define an action property with params */
-export interface ActionableParam<P, R = void> {
+/** Used to define the action property to components */
+export interface Actionable<P = undefined, R = void> {
   /** The action to perform */
-  action?: ActionParam<P, R>
-}
-
-/** Used to define an action property */
-export interface Actionable<R = void> {
-  /** The action to perform */
-  action?: Action<R>
+  action?: Action<P, R>
 }
