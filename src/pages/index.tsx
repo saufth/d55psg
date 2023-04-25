@@ -6,6 +6,8 @@ import Image from 'next/image'
 * @returns The HomePage component
 */
 export default function HomePage() {
+  const description = 'Desarrollamos servicios estrategicos y soluciones diseñadas para escalar, a fin de evolucionar hacia un legado de progreso y verdad.'
+
   return (
     <>
       <div className='w-full px-[5%] mt-24 mb-24 md:mb-6'>
@@ -26,20 +28,20 @@ export default function HomePage() {
             </div>
             <div className='w-full md:w-1/2 mt-4 space-y-2'>
               <div className='text-blue-600'>
-                Profrsional Service Group
+                D55 – Profrsional Service Group
               </div>
               <h1>
-                Scale strategically with enterprise consulting and advisory services for world’s leading brands
+                Escala tu empresa al siguiente nivel con estrategias y tacticas innovadoras
               </h1>
               <div className='md:hidden pt-6 md:pt-8 text-primary'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, cumque earum similique optio tenetur magni error excepturi accusantium voluptatem hic fugit quibusdam incidunt velit ex commodi nostrum aspernatur consequatur dicta.
+                {description}
               </div>
             </div>
           </div>
         </div>
         <div className='hidden md:flex justify-end'>
           <div className='w-1/2 py-8 pl-8 pr-16 text-primary'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, cumque earum similique optio tenetur magni error excepturi accusantium voluptatem hic fugit quibusdam incidunt velit ex commodi nostrum aspernatur consequatur dicta.
+            {description}
           </div>
         </div>
       </div>
