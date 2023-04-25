@@ -18,7 +18,7 @@ export default function HomePage() {
               <Image
                 src='/images/hero.jpg'
                 alt='D55PSG hero image'
-                className='w-full h-auto absolute top-8 md:-top-28 rounded-[44px] md:rounded-2xl'
+                className='w-full h-auto absolute top-8 md:-top-28 rounded-[24px] md:rounded-2xl'
                 width={620}
                 height={467}
                 priority
