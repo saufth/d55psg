@@ -1,50 +1,64 @@
 // Components
-import Image from 'next/image'
+import About from '@/components/pages/About'
+import Footer from '@/components/pages/Footer'
+import Hero from '@/components/pages/Hero'
+import Solutions from '@/components/pages/Solutions'
+// Types
+import type { ShowcaseProps } from '@/types/data-dislay'
+
+const showcases: ShowcaseProps[] = [
+  {
+    heading: 'Excelencia',
+    descriptions: ['Nos esforzamos por alcanzar la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta el servicio al cliente.'],
+    image: 'hero'
+  },
+  {
+    heading: 'Integridad',
+    descriptions: ['Actuamos con honestidad y ética en todas las relaciones comerciales y personales.'],
+    image: 'hero'
+  },
+  {
+    heading: 'Innovación',
+    descriptions: ['Buscamos constantemente nuevas soluciones y métodos creativos para superar los desafíos y las expectativas del mercado.'],
+    image: 'hero'
+  },
+  {
+    heading: 'Compromiso con el cliente',
+    descriptions: ['Estamos dedicados a proporcionar el mejor servicio posible a nuestros clientes, ofreciendo soluciones personalizadas y orientadas a resultados.'],
+    image: 'hero'
+  },
+  {
+    heading: 'Trabajo en equipo',
+    descriptions: ['Valoramos y respetamos las contribuciones de cada miembro del equipo, trabajando juntos para alcanzar objetivos compartidos.'],
+    image: 'hero'
+  },
+  {
+    heading: 'Responsabilidad social',
+    descriptions: ['Nos preocupamos por el impacto ambiental y social de nuestras operaciones y nos comprometemos a ser una empresa socialmente responsable.'],
+    image: 'hero'
+  },
+  {
+    heading: 'Crecimiento personal y profesional',
+    descriptions: ['Nos comprometemos a proporcionar un ambiente de trabajo que promueva el crecimiento personal y profesional de nuestros empleados.'],
+    image: 'hero'
+  }
+]
 
 /**
 * The Home page of the application
 * @returns The HomePage component
 */
-export default function HomePage() {
-  const description = 'Desarrollamos servicios estrategicos y soluciones diseñadas para escalar, a fin de evolucionar hacia un legado de progreso y verdad.'
-
+export default function HomePage () {
   return (
     <>
-      <div className='w-full px-[5%] mt-24 mb-24 md:mb-6'>
-        <div className='w-full rounded-[30px] bg-blue-100'>
-          <div className='w-full h-16 md:h-20 px-6 flex items-center'>
-            Loem ipsum
-          </div>
-          <div className='max-w-9xl pt-10 pb-44 md:pb-10 md:pt-[8%] px-10 lg:px-[9%] flex flex-col-reverse md:flex-row items-center gap-10 md:gap-12 lg:gap-16 rounded-[30px] bg-gradient-to-t from-slate-200 via-blue-50 to-blue-50'>
-            <div className='w-full md:w-1/2 h-full relative'>
-              <Image
-                src='/images/hero.jpg'
-                alt='D55PSG hero image'
-                className='w-full h-auto absolute top-8 md:-top-28 rounded-[24px] md:rounded-2xl'
-                width={620}
-                height={467}
-                priority
-              />
-            </div>
-            <div className='w-full md:w-1/2 mt-4 space-y-2'>
-              <div className='text-blue-600'>
-                D55 – Profrsional Service Group
-              </div>
-              <h1>
-                Escala tu empresa al siguiente nivel con estrategias y tacticas innovadoras
-              </h1>
-              <div className='md:hidden pt-6 md:pt-8 text-primary'>
-                {description}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='hidden md:flex justify-end'>
-          <div className='w-1/2 py-8 pl-8 pr-16 text-primary'>
-            {description}
-          </div>
-        </div>
-      </div>
+      <Hero />
+      <Solutions />
+      <About
+        id='strategy'
+        heading='En D55PSG, nuestros valores son fundamentales'
+        showcases={showcases}
+      />
+      <Footer />
     </>
   )
 }

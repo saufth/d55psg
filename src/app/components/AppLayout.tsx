@@ -14,7 +14,7 @@ import {
 // Types
 import type { ParentProps } from '../../types/layout'
 
-const AppLayout = ({ children } : ParentProps) => {
+export default function AppLayout ({ children } : ParentProps) {
   const title = `${organization} – ${description}`
 
   return (
@@ -59,5 +59,3 @@ const AppLayout = ({ children } : ParentProps) => {
     </>
   )
 }
-
-export default AppLayout

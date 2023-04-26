@@ -11,7 +11,7 @@ export const organization = 'D55PSG'
 export const description = 'Professional Service Group'
 
 /** The keyword list of the application */
-export const keywordList = [
+export const keywordList = Object.freeze([
   'd55psg',
   'd55psg group',
   'd55psg professional service group',
@@ -41,7 +41,7 @@ export const keywordList = [
   'coaching de negocios',
   'coaching empresarial',
   'servicios de coaching empresarial'
-]
+])
 
 /** The keyword list as string */
 export const keywords = String(keywordList)
@@ -53,7 +53,7 @@ export const coverImageUrl = `${baseUrl}cover.jpg`
 export const twitter = '@d55psg'
 
 /** Google seach scheme */
-export const googleSearchSchema = {
+export const googleSearchSchema = Object.freeze({
   '@context': 'https://schema.org/',
   '@graph': [
     {
@@ -85,4 +85,4 @@ export const googleSearchSchema = {
       inLanguage: 'es-MX'
     }
   ]
-}
+})

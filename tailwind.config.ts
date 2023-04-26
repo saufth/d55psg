@@ -36,6 +36,16 @@ export default {
       fontFamily: {
         // Salaryman
         salaryman: ['Salaryman'],
+        // Avenir Next
+        'avenir-regular': ['Avenir Next Regular', 'sans serif'],
+        'avenir-bold': ['Avenir Next Bold', 'sans serif'],
+        // Bebas Neue
+        bebas: ['Bebas Neue'],
+        'bebaspro-thin': ['Bebas Neue Pro Thin'],
+        'bebaspro-light': ['Bebas Neue Pro Light'],
+        'bebaspro-book': ['Bebas Neue Pro Book'],
+        'bebaspro-regular': ['Bebas Neue Pro Regular'],
+        'bebaspro-bold': ['Bebas Neue Pro Bold'],
         // Uni Neue
         'unineue-thin': ['UniNeue thin'],
         'unineue-light': ['UniNeue light'],

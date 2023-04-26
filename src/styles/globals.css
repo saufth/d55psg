@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply font-unineue-regular text-zinc-950 antialiased bg-white;
+    @apply font-avenir-regular text-zinc-700 antialiased bg-white;
     text-rendering: optimizeLegibility;
   }
 
@@ -27,11 +27,59 @@
     @apply text-inherit no-underline;
   }
 
-  h1 {
-    @apply font-unineue-bold text-3xl md:text-4xl text-zinc-950 tracking-tight leading-tight;
+  h1, h2 {
+    @apply font-bebaspro-bold text-5xl text-zinc-900;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply font-bebaspro-bold text-3xl md:text-4xl;
   }
 
   /* Fonts */
+
+  @font-face {
+    font-family: Avenir Next Regular;
+    src: url(../../public/fonts/avenir-next/AvenirNextLTPro-Regular.otf);
+  }
+
+  @font-face {
+    font-family: Avenir Next Bold;
+    src: url(../../public/fonts/avenir-next/AvenirNextLTPro-Bold.otf);
+  }
+
+  @font-face {
+    font-family: Bebas Neue;
+    src: url(../../public/fonts/BebasNeue-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Bebas Neue Pro Thin;
+    src: url(../../public/fonts/bebas-neue-pro/BebasNeuePro-Thin.otf);
+  }
+
+  @font-face {
+    font-family: Bebas Neue Pro Light;
+    src: url(../../public/fonts/bebas-neue-pro/BebasNeuePro-Light.otf);
+  }
+
+  @font-face {
+    font-family: Bebas Neue Pro Book;
+    src: url(../../public/fonts/bebas-neue-pro/BebasNeuePro-Book.otf);
+  }
+
+  @font-face {
+    font-family: Bebas Neue Pro Regular;
+    src: url(../../public/fonts/bebas-neue-pro/BebasNeuePro-Regular.otf);
+  }
+
+  @font-face {
+    font-family: Bebas Neue Pro Bold;
+    src: url(../../public/fonts/bebas-neue-pro/BebasNeuePro-Bold.otf);
+  }
 
   @font-face {
     font-family: Salaryman;

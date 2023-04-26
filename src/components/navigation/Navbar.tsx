@@ -14,7 +14,7 @@ import { useCycle } from 'framer-motion'
  * The main navbar of the application
  * @returns The Navbar component
  */
-const Navbar = () => {
+export default function Navbar () {
   // Animation
   const [isOpen, toggle] = useCycle(false, true)
   /** Handle the Menu state */
@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
       <header className='fixed top-0 left-0 right-0 z-70 bg-white/60 backdrop-filter backdrop-blur'>
-        <div className='max-w-9xl h-24 px-[5%] md:py-4 lg:py-5 mx-auto flex justify-between items-center'>
+        <div className='max-w-9xl h-24 px-[5%] md:px-[7%] md:py-4 lg:py-5 mx-auto flex justify-between items-center'>
           <NextLink href={NAV.home.href} onClick={closeToggle}>
             <Image
               src='/images/d55psg-logomark-bg.svg'
@@ -65,5 +65,3 @@ const Navbar = () => {
     </>
   )
 }
-
-export default Navbar

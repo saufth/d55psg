@@ -4,10 +4,10 @@ import NextLink from 'next/link'
 import type { LinkProps } from '@/types/navigation'
 
 /**
- * A simple link using for navigation
+ * A simple link for navigation
  * @returns The Link component
  */
-const Link = ({ children, href }: LinkProps) => {
+export default function Link ({ children, href }: LinkProps) {
   return (
     <NextLink
       className='hidden md:block font-unineue-bold text-sm text-zinc-800 hover:text-primary transition-colors'
@@ -17,5 +17,3 @@ const Link = ({ children, href }: LinkProps) => {
     </NextLink>
   )
 }
-
-export default Link

@@ -7,10 +7,10 @@ import type { Actionable } from '@/types/input'
 * @param Actionable The basic input component props
 * @returns The MenuButton component
 */
-const MenuButton = ({ action }: Actionable) => {
+export default function MenuButton ({ action }: Actionable) {
   return (
     <button
-      className='w-8 h-[30px] [&>span]:w-full [&>span]:h-0.75 lg:hidden flex flex-col justify-around items-end [&>span]:bg-primary [&>span]:rounded'
+      className='w-8 h-[30px] [&>span]:w-full [&>span]:h-0.75 lg:hidden flex flex-col justify-around items-end [&>span]:bg-sky-700 [&>span]:rounded'
       onClick={action}
     >
       <span />
@@ -19,5 +19,3 @@ const MenuButton = ({ action }: Actionable) => {
     </button>
   )
 }
-
-export default MenuButton

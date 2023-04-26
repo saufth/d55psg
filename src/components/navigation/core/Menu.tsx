@@ -58,7 +58,7 @@ const navVariants = {
  * The main menu of application
  * @returns Menu component
  */
-const Menu = ({ isOpen, action }: MenuProps) => {
+export default function Menu ({ isOpen, action }: MenuProps) {
   // Animation
   const { width } = useDimensions()
 
@@ -97,5 +97,3 @@ const Menu = ({ isOpen, action }: MenuProps) => {
     </motion.div>
   )
 }
-
-export default Menu
