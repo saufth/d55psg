@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 /** Hero description */
-const description = 'Desarrollamos estrategias y tacticas productivas y autosustentables a corto, mediano y largo plazo.'
+const description = 'Desarrollamos estrategias y tácticas productivas y autosustentables a corto, mediano y largo plazo.'
 /**
 * The hero section component
 * @returns The Hero component
@@ -30,7 +30,7 @@ export default function Hero () {
               D55 Professional Services Group
             </p>
             <h1>
-              Escala tu empresa al siguiente nivel con estrategias y tacticas innovadoras.
+              Escala tu empresa al siguiente nivel con estrategias y tácticas innovadoras.
             </h1>
             <p className='md:hidden pt-6 md:pt-8'>
               {description}

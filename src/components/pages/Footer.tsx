@@ -16,7 +16,7 @@ export default function Footer () {
   const copyright = `Copyright 2023 ${organization} Contable. All rights reserved.`
 
   return (
-    <footer className='max-w-9xl px-5 md:px-10 pt-8 pb-12 mx-auto mt-32 flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
+    <footer className='max-w-9xl px-5 md:px-10 pt-8 pb-12 mx-auto flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
       <div className='w-full mx-auto flex flex-col md:flex-row-reverse justify-center md:justify-between items-center gap-y-8'>
         <div className='underline text-lg md:text-2xl'>
           <NextLink
