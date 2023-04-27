@@ -29,11 +29,11 @@ export default function Navbar () {
         <div className='max-w-9xl h-24 px-[5%] md:px-[7%] md:py-4 lg:py-5 mx-auto flex justify-between items-center'>
           <NextLink href={NAV.home.href} onClick={closeToggle}>
             <Image
-              src='/images/d55psg-logomark-bg.svg'
+              className='w-auto h-10 md:h-12'
+              src='/images/logo-vertical.svg'
               alt={logoAlt}
-              className='w-auto h-12'
               width={48}
-              height={48}
+              height={231.775}
               priority
             />
           </NextLink>
