@@ -92,8 +92,9 @@ export default function Solutions () {
             Nuestras soluciones
           </p>
           <h2>
-            Nuestras soluciones giran en torno a generar valor y a convertirnos en un aliado
-            estrategico y determinante para las empresas de nuestros clientes.
+            Nuestras soluciones están orientadas a generar valor mientras nos convertimos en
+            un aliado estratégico que determine la rentabilidad y el éxito de las empresas de
+            nuestros clientes.
           </h2>
         </header>
         <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:gap-x-5 gap-y-20 items-start justify-start'>
