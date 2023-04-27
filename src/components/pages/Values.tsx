@@ -89,6 +89,7 @@ export default function Values () {
       <About
         id='values'
         heading='En D55, nuestros valores son la brújula que guía nuestro día a día. Te presentamos los más importantes para nosotros.'
+        description='Nuestros valores'
         showcases={VALUES}
       />
     </>
