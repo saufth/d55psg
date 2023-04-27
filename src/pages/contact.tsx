@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 // Type
 import type { FormEvent } from 'react'
+import Button from '@/components/input/core/Button'
 
 /**
 * The contact section of application
@@ -49,7 +50,7 @@ const Contact = () => {
         >
           <div>
             <input
-              className='w-full px-4 py-3 bg-zinc-200 rounded-sm resize-none'
+              className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
               type='text'
               name='contact_name'
               id='contact_name'
@@ -59,7 +60,7 @@ const Contact = () => {
           </div>
           <div>
             <input
-              className='w-full px-4 py-3 bg-zinc-200 rounded-sm resize-none'
+              className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
               type='email'
               name='contact_email'
               id='contact_email'
@@ -69,7 +70,7 @@ const Contact = () => {
           </div>
           <div>
             <textarea
-              className='w-full px-4 py-3 bg-zinc-200 rounded-sm resize-none'
+              className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
               name='contact_description'
               id='contact_description'
               rows={1}
@@ -79,12 +80,9 @@ const Contact = () => {
             />
           </div>
           <div className='pt-6 flex justify-center'>
-            <button
-              className='w-64 h-12 text-white text-lg bg-primary rounded-sm'
-              type='submit'
-            >
+            <Button type='submit'>
               Enviar
-            </button>
+            </Button>
           </div>
         </form>
       </div>

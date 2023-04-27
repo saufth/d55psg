@@ -14,4 +14,7 @@ export interface Actionable<P = undefined, R = void> {
 }
 
 /** The link button component properties */
-export interface ButtonProps extends Parent<string>, Actionable, Themeable {}
+export interface ButtonProps extends Parent<string>, Actionable, Themeable {
+  /** The button type */
+  type: 'button' | 'submit'
+}

@@ -11,13 +11,15 @@ import styles from '@/styles/Button.module.css'
  * @param ButtonProps The component props
  * @returns The Button component
  */
-export default function Button ({ children, action, theme = THEME.primary }: ButtonProps) {
-  const themeStyle = theme === THEME.secondary ? styles.btn__secondary : styles.btn__primary
+export default function Button ({ children, action, type, theme = THEME.primary }: ButtonProps) {
+  const themeStyle = theme === THEME.primary ? styles.btn__primary : styles.btn__secondary
   const btnStyle = `${styles.btn} ${themeStyle}`
 
   return (
-    <button className={btnStyle} onClick={action}>
-      {children}
+    <button onClick={action} type={type}>
+      <div className={btnStyle}>
+        {children}
+      </div>
     </button>
   )
 }

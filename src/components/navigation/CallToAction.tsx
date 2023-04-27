@@ -6,7 +6,7 @@ import type { Themeable } from '@/types/theme'
 import LinkButton from './core/LinkButton'
 
 /**
- * The primary call to actions of the application
+ * The main call to action link of the application
  * @see {@link Themeable} for props specification
  * @param Themeable The component props
  * @returns The CallToAction component

@@ -47,7 +47,7 @@ export default function Navbar () {
           })}
 
           <div className='hidden lg:block'>
-            <CallToAction theme='secondary' />
+            <CallToAction />
           </div>
 
           {isOpen

@@ -3,9 +3,9 @@
 }
 
 .btn__primary {
-  @apply bg-zinc-600 hover:bg-primary;
+  @apply bg-sky-700 hover:bg-sky-600;
 }
 
 .btn__secondary {
-  @apply bg-sky-700 hover:bg-sky-600;
+  @apply bg-zinc-600 hover:bg-primary;
 }
