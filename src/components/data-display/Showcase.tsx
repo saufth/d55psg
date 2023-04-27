@@ -1,5 +1,6 @@
 // Types
 import type { ShowcaseProps } from '@/types/data-dislay'
+import Image from 'next/image'
 
 /**
  * Using to show a image with a heading and descriptions
@@ -16,13 +17,13 @@ export default function Showcase (
   }: ShowcaseProps
 ) {
   const containerReverseStyle = reverse ? 'md:flex-row-reverse' : ''
-  const backgroundImageStyle = { backgroundImage: `url(/images/sections/${image}.jpg)` }
+  const imageSrc = `/images/sections/${image}`
 
   return (
-    <div className={`h-auto md:h-sm px-10 lg:px-[9%] flex flex-col-reverse md:flex-row md:gap-x-20 gap-y-5 md:gap-y-0 ${containerReverseStyle}`}>
+    <div className={`h-auto md:h-sm flex flex-col-reverse md:flex-row md:gap-x-20 gap-y-5 md:gap-y-0 ${containerReverseStyle}`}>
       <div className='w-full md:w-1/2 h-auto md:h-full'>
         <div className='w-full h-full flex flex-col md:justify-center gap-y-4'>
-          <div className='space-y-5 md:space-y-6'>
+          <div className='space-y-2 text-center md:text-left'>
             <h3 className='text-sky-700'>
               {heading}
             </h3>
@@ -38,10 +39,14 @@ export default function Showcase (
       </div>
 
       <div className='w-full md:w-1/2 h-auto md:h-full'>
-        <div className='w-full h-64 md:h-md lg:h-full flex flex-col justify-center'>
-          <div
-            className='w-full h-full bg-center bg-cover rounded-[9%]'
-            style={backgroundImageStyle}
+        <div className='w-full'>
+          <Image
+            src={imageSrc}
+            alt='D55PSG service image'
+            className='w-full h-auto rounded-[24px] md:rounded-3xl'
+            width={500}
+            height={500}
+            priority
           />
         </div>
       </div>

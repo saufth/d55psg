@@ -1,8 +1,8 @@
 // Types
 import type { ReactNode } from 'react'
 
-/** The parent props */
-export interface ParentProps {
-  /** The children of parent component */
-  children: ReactNode
+/** Used to define a geeric parent element */
+export interface Parent<T = ReactNode> {
+  /** The child element of parent component */
+  children: T
 }

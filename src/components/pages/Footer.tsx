@@ -1,5 +1,5 @@
 // Components
-import CallToAction from '../navigation/core/CallToAction'
+import CallToAction from '../navigation/CallToAction'
 import Image from 'next/image'
 import NextLink from 'next/link'
 // Config
@@ -13,7 +13,7 @@ export default function Footer () {
   return (
     <footer className='max-w-9xl px-5 md:px-10 pt-8 pb-12 mx-auto flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
       <div className='w-full mx-auto flex flex-col md:flex-row-reverse justify-center md:justify-between items-center gap-y-8'>
-        <div className='text-xl underline'>
+        <div className='underline'>
           <NextLink
             href='mailto:info@d55psg.com'
             target='_blank'

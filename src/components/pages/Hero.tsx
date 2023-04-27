@@ -11,9 +11,7 @@ export default function Hero () {
   return (
     <section className='w-full px-[4%] mt-24 mb-52 sm:mb-96 md:mb-6'>
       <div className='max-w-9xl my-0 mx-auto bg-blue-100 rounded-[30px]'>
-        <div className='w-full h-16 md:h-20 px-6 flex items-center'>
-          Loem ipsum
-        </div>
+        <div className='w-full h-16 md:h-20 px-6 flex items-center' />
         <div className='w-full pt-10 pb-28 md:pb-10 md:pt-[8%] px-10 lg:px-[9%] flex flex-col-reverse md:flex-row gap-10 md:gap-12 lg:gap-16 rounded-[30px] bg-gradient-to-t from-blue-100 via-sky-50 to-sky-50'>
           <div className='w-full md:w-1/2 h-0 lg:h-40 relative'>
             <Image

@@ -1,5 +1,5 @@
 // Components
-import CallToAction from './core/CallToAction'
+import CallToAction from './CallToAction'
 import Image from 'next/image'
 import Link from './core/Link'
 import NextLink from 'next/link'

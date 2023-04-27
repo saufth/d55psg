@@ -12,9 +12,9 @@ import {
   twitter
 } from '../config'
 // Types
-import type { ParentProps } from '../../types/layout'
+import type { Parent } from '../../types/layout'
 
-export default function AppLayout ({ children } : ParentProps) {
+export default function AppLayout ({ children } : Parent) {
   const title = `${organization} – ${description}`
 
   return (

@@ -1,4 +1,4 @@
-/** Used for define a size property */
+/** Used to define a size property */
 export type Size = 'sm' | 'md' | 'lg'
 
 /** Define width and height properties  */

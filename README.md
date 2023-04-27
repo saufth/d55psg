@@ -1,6 +1,6 @@
 # D55PSG official website
 
-D55PSG official website built in [NextJS](https://nextjs.org/) and [Typescript](https://www.typescriptlang.org/) with [Zustand](https://zustand-demo.pmnd.rs/) for global state, [TailwindCSS](https://tailwindcss.com/) for styling and [Framer Motion](https://www.framer.com/motion/) animation.
+D55PSG official website built in [NextJS](https://nextjs.org/) and [Typescript](https://www.typescriptlang.org/) with [Zustand](https://zustand-demo.pmnd.rs/) for global state, [TailwindCSS](https://tailwindcss.com/) for styling and [Framer Motion](https://www.framer.com/motion/) for animations.
 
 ## Technologies
 

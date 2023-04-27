@@ -12,8 +12,14 @@ export interface ShowcaseProps {
   heading: string
   /** Description of the showcase */
   descriptions: string[]
-  /** Image to use on the showcase */
+  /** The mage name and extention */
   image: string
   /** Invert the order of content */
   reverse?: boolean
+}
+
+/** The ServiceCard component porperties */
+export interface ServiceCardProps extends HeaderProps {
+  /** Service card image name and extention */
+  image: string
 }

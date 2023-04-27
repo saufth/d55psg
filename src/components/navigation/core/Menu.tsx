@@ -1,5 +1,5 @@
 // Components
-import CallToAction from './CallToAction'
+import CallToAction from '../CallToAction'
 import NextLink from 'next/link'
 // Hooks
 import useDimensions from '../../../modules/sizing/hooks/useDimensions'
