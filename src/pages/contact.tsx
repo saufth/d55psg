@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 // Type
 import type { FormEvent } from 'react'
 import Button from '@/components/input/core/Button'
+import Label from '@/components/data-display/Label'
 
 /**
 * The contact section of application
@@ -36,9 +37,9 @@ export default function ContactPage () {
     <section className='max-w-4xl px-[4%] my-32 mx-auto'>
       <div className='px-10 md:px-[9%] space-y-12'>
         <div className='space-y-2'>
-          <p className='text-sky-700'>
+          <Label>
             ¿Tomamos un café?
-          </p>
+          </Label>
           <h1 className='text-5xl md:text-6xl'>
             Pongamosnos en contacto
           </h1>

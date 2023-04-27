@@ -1,10 +1,11 @@
 // Components
-import ServiceCard from '@/components/data-display/ServiceCard'
-import { ServiceCardProps } from '@/types/data-dislay'
+import ServiceCard from '../data-display/ServiceCard'
+import Label from '../data-display/Label'
 // Config
 import { organization } from '@/modules/app/config'
 // Types
 import type { Dimensionable } from '@/types/sizing'
+import type { ServiceCardProps } from '@/types/data-dislay'
 
 /** The size of the image */
 const IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
@@ -88,9 +89,9 @@ export default function Solutions () {
     <section id='solutions' className='px-[4%] py-32 mt-32 bg-zinc-50'>
       <div className='px-10 lg:px-[9%] flex flex-col lg:flex-row gap-y-20 lg:gap-x-20'>
         <header className='md:w-xl space-y-2'>
-          <p className='text-sky-700'>
+          <Label>
             Nuestras soluciones
-          </p>
+          </Label>
           <h2>
             Nuestras soluciones están orientadas a generar valor mientras nos convertimos en
             un aliado estratégico que determine la rentabilidad y el éxito de las empresas de

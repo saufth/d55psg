@@ -1,5 +1,6 @@
 // Components
 import Image from 'next/image'
+import Label from '../data-display/Label'
 
 /** Hero description */
 const description = 'Desarrollamos estrategias y tácticas productivas y autosustentables a corto, mediano y largo plazo.'
@@ -24,9 +25,9 @@ export default function Hero () {
             />
           </div>
           <div className='w-full md:w-1/2 lg:mt-12 space-y-3'>
-            <p className='text-sky-700'>
+            <Label>
               D55 Professional Services Group
-            </p>
+            </Label>
             <h1>
               Escala tu empresa al siguiente nivel con estrategias y tácticas innovadoras.
             </h1>
