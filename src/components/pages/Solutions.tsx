@@ -92,7 +92,8 @@ export default function Solutions () {
             Nuestras soluciones
           </p>
           <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nuestras soluciones giran en torno a generar valor y a convertirnos en un aliado
+            estrategico y determinante para las empresas de nuestros clientes.
           </h2>
         </header>
         <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:gap-x-5 gap-y-20 items-start justify-start'>

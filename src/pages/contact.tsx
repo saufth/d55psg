@@ -10,7 +10,7 @@ import Button from '@/components/input/core/Button'
 * The contact section of application
 * @returns The Contact section component
 */
-const Contact = () => {
+export default function ContactPage () {
   const formRef = useRef<HTMLFormElement>(null)
 
   const sendEmail = (event: FormEvent<HTMLFormElement>) => {
@@ -89,5 +89,3 @@ const Contact = () => {
     </section>
   )
 }
-
-export default Contact

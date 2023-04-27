@@ -16,8 +16,8 @@ export const NAV: Readonly<Navigable> = Object.freeze({
     href: '/#values'
   },
   why: {
-    children: 'Razón de ser',
-    href: '/reason-why'
+    children: 'Historia',
+    href: '/history'
   },
   contact: {
     children: 'Contáctanos',

@@ -1,5 +1,5 @@
-/** The Reason why page of the application */
-export default function Why () {
+/** The History page of the application */
+export default function HistoryPage () {
   return (
     <section id='reason-why' className='px-[4%]'>
       <div className='px-10 md:px-[9%] space-y-6 my-32'>
