@@ -22,8 +22,6 @@ export default function Hero () {
               height={467}
               priority
             />
-            <div className='w-10 md:w-12 h-10 md:h-12 absolute md:-top-6 right-16 rotate-45 bg-primary/30 backdrop-filter backdrop-blur-lg z-20 rounded-2xl' />
-            <div className='w-12 md:w-16 h-12 md:h-16 absolute -bottom-44 md:-bottom-24 -left-6 md:-left-10 rotate-12 bg-primary/30 backdrop-filter backdrop-blur-lg z-20 rounded-2xl' />
           </div>
           <div className='w-full md:w-1/2 lg:mt-12 space-y-3'>
             <p className='text-sky-700'>

@@ -20,11 +20,11 @@ export default function Footer () {
       <div className='w-full mx-auto flex flex-col md:flex-row-reverse justify-center md:justify-between items-center gap-y-8'>
         <div className='underline text-lg md:text-2xl'>
           <NextLink
-            href='mailto:info@d55psg.com'
+            href='mailto:contacto@d55psg.com'
             target='_blank'
             rel='noreferrer'
           >
-            info@d55psg.com
+            contacto@d55psg.com
           </NextLink>
         </div>
         <div className='md:hidden'>
