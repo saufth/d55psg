@@ -11,7 +11,7 @@ export const organization = 'D55PSG'
 export const description = 'Professional Service Group'
 
 /** The keyword list of the application */
-export const keywordList = Object.freeze([
+export const KEYWORDS = Object.freeze([
   'd55psg',
   'd55psg group',
   'd55psg professional service group',
@@ -44,7 +44,7 @@ export const keywordList = Object.freeze([
 ])
 
 /** The keyword list as string */
-export const keywords = String(keywordList)
+export const keywords = String(KEYWORDS)
 
 /** Is used as a cover image for social networks */
 export const coverImageUrl = `${baseUrl}cover.jpg`

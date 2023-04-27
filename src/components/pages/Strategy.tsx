@@ -1,45 +1,82 @@
 // Components
 import About from '@/components/sections/About'
+// Config
+import { organization } from '@/modules/app/config'
 // Types
 import type { ShowcaseProps } from '@/types/data-dislay'
+import type{ Dimensionable } from '@/types/sizing'
 
-const showcases: ShowcaseProps[] = [
+/** The size of the image */
+const IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
+  width: 500,
+  height: 500
+})
+
+const STRATEGY: Readonly<ShowcaseProps[]> = Object.freeze([
   {
     heading: 'Excelencia',
-    descriptions: ['Nos esforzamos por alcanzar la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta el servicio al cliente.'],
-    image: 'excellence.svg'
+    description: 'Nos esforzamos por alcanzar la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta el servicio al cliente.',
+    image: {
+      name: 'excellence.svg',
+      alt: `${organization} Excelencia`,
+      ...IMG_SIZE
+    }
   },
   {
     heading: 'Integridad',
-    descriptions: ['Actuamos con honestidad y ética en todas las relaciones comerciales y personales.'],
-    image: 'integrity.svg'
+    description: 'Actuamos con honestidad y ética en todas las relaciones comerciales y personales.',
+    image: {
+      name: 'integrity.svg',
+      alt: `${organization} Integridad`,
+      ...IMG_SIZE
+    }
   },
   {
     heading: 'Innovación',
-    descriptions: ['Buscamos constantemente nuevas soluciones y métodos creativos para superar los desafíos y las expectativas del mercado.'],
-    image: 'innovation.svg'
+    description: 'Buscamos constantemente nuevas soluciones y métodos creativos para superar los desafíos y las expectativas del mercado.',
+    image: {
+      name: 'innovation.svg',
+      alt: `${organization} Innovación`,
+      ...IMG_SIZE
+    }
   },
   {
     heading: 'Compromiso con el cliente',
-    descriptions: ['Estamos dedicados a proporcionar el mejor servicio posible a nuestros clientes, ofreciendo soluciones personalizadas y orientadas a resultados.'],
-    image: 'commitment.svg'
+    description: 'Estamos dedicados a proporcionar el mejor servicio posible a nuestros clientes, ofreciendo soluciones personalizadas y orientadas a resultados.',
+    image: {
+      name: 'commitment.svg',
+      alt: `${organization} Compromiso con el cliente`,
+      ...IMG_SIZE
+    }
   },
   {
     heading: 'Trabajo en equipo',
-    descriptions: ['Valoramos y respetamos las contribuciones de cada miembro del equipo, trabajando juntos para alcanzar objetivos compartidos.'],
-    image: 'teamwork.svg'
+    description: 'Valoramos y respetamos las contribuciones de cada miembro del equipo, trabajando juntos para alcanzar objetivos compartidos.',
+    image: {
+      name: 'teamwork.svg',
+      alt: `${organization} Trabajo en equipo`,
+      ...IMG_SIZE
+    }
   },
   {
     heading: 'Responsabilidad social',
-    descriptions: ['Nos preocupamos por el impacto ambiental y social de nuestras operaciones y nos comprometemos a ser una empresa socialmente responsable.'],
-    image: 'responsability.svg'
+    description: 'Nos preocupamos por el impacto ambiental y social de nuestras operaciones y nos comprometemos a ser una empresa socialmente responsable.',
+    image: {
+      name: 'responsability.svg',
+      alt: `${organization} Responsabilidad social`,
+      ...IMG_SIZE
+    }
   },
   {
     heading: 'Crecimiento personal y profesional',
-    descriptions: ['Nos comprometemos a proporcionar un ambiente de trabajo que promueva el crecimiento personal y profesional de nuestros empleados.'],
-    image: 'growth.svg'
+    description: 'Nos comprometemos a proporcionar un ambiente de trabajo que promueva el crecimiento personal y profesional de nuestros empleados.',
+    image: {
+      name: 'growth.svg',
+      alt: `${organization} Crecimiento personal y profesional`,
+      ...IMG_SIZE
+    }
   }
-]
+])
 
 /**
 * The Strategy section of the application
@@ -52,7 +89,7 @@ export default function Strategy () {
         id='strategy'
         heading='En D55PSG, nuestros valores son fundamentales'
         description='Nuestra estrategia'
-        showcases={showcases}
+        showcases={STRATEGY}
       />
     </>
   )

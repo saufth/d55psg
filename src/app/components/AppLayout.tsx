@@ -1,4 +1,5 @@
 // Components
+import Footer from '@/components/pages/Footer'
 import GSearchSchemaScript from './GSearchSchemaScript'
 import Head from 'next/head'
 import Navbar from '@/components/navigation/Navbar'
@@ -10,7 +11,7 @@ import {
   keywords,
   organization,
   twitter
-} from '../config'
+} from '../../modules/app/config'
 // Types
 import type { Parent } from '../../types/layout'
 
@@ -55,6 +56,7 @@ export default function AppLayout ({ children } : Parent) {
       <main>
         {children}
       </main>
+      <Footer />
       <GSearchSchemaScript />
     </>
   )

@@ -1,14 +1,9 @@
 // Config
 import { THEME } from '@/modules/theme/config'
 // Types
-import type { Actionable } from '@/types/input'
-import type { Parent } from '@/types/layout'
-import type { Themeable } from '@/types/theme'
+import type { ButtonProps } from '@/types/input'
 // Styles
 import styles from '@/styles/Button.module.css'
-
-/** The link button component properties */
-interface ButtonProps extends Parent<string>, Actionable, Themeable {}
 
 /**
  * A simple themeable button
@@ -21,10 +16,8 @@ export default function Button ({ children, action, theme = THEME.primary }: But
   const btnStyle = `${styles.btn} ${themeStyle}`
 
   return (
-    <button onClick={action}>
-      <div className={btnStyle}>
-        {children}
-      </div>
+    <button className={btnStyle} onClick={action}>
+      {children}
     </button>
   )
 }

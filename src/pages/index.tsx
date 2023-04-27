@@ -1,5 +1,4 @@
 // Components
-import Footer from '@/components/pages/Footer'
 import Hero from '@/components/pages/Hero'
 import Solutions from '@/components/pages/Solutions'
 import Strategy from '@/components/pages/Strategy'
@@ -14,7 +13,6 @@ export default function HomePage () {
       <Hero />
       <Solutions />
       <Strategy />
-      <Footer />
     </>
   )
 }

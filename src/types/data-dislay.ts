@@ -1,25 +1,29 @@
-/** Header props */
+import { Dimensionable } from './sizing'
+
+/** Header properties */
 export interface HeaderProps {
   /** Header heading */
   heading: string
   /** Header description */
-  description?: string
+  description: string
 }
 
-/** Showcase component props */
-export interface ShowcaseProps {
-  /** Heading of the showcase */
-  heading: string
-  /** Description of the showcase */
-  descriptions: string[]
-  /** The mage name and extention */
-  image: string
-  /** Invert the order of content */
-  reverse?: boolean
+/** Image properties */
+export interface ImageProps extends Dimensionable {
+  /** The image name and extention */
+  name: string
+  /** The image alternative information */
+  alt: string
 }
 
 /** The ServiceCard component porperties */
 export interface ServiceCardProps extends HeaderProps {
-  /** Service card image name and extention */
-  image: string
+  /** The image properties */
+  image: ImageProps
+}
+
+/** Showcase component props */
+export interface ShowcaseProps extends ServiceCardProps {
+  /** Invert the order of content */
+  reverse?: boolean
 }

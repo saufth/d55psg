@@ -1,3 +1,4 @@
+// Types
 import type { Config } from 'tailwindcss'
 
 /** Default values for sizing and spacing */
@@ -85,5 +86,9 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/forms')({
+      strategy: 'class'
+    })
+  ]
 } satisfies Config

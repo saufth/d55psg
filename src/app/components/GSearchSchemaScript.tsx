@@ -1,7 +1,7 @@
 // Components
 import Script from 'next/script'
 // Config
-import { googleSearchSchema } from '../../app/config'
+import { googleSearchSchema } from '../../modules/app/config'
 
 /**
  * Add the website JSON ID schema for Google Search to the script of this layout

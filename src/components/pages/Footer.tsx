@@ -3,17 +3,22 @@ import CallToAction from '../navigation/CallToAction'
 import Image from 'next/image'
 import NextLink from 'next/link'
 // Config
-import { NAV } from '@/modules/navigation/config'
+import { logoAlt } from '@/modules/data-display/config'
+import { NAV_LIST } from '@/modules/navigation/config'
+import { organization } from '@/modules/app/config'
 
 /**
  * The footer section of application
  * @returns Footer section component
  */
 export default function Footer () {
+  // Config
+  const copyright = `Copyright 2023 ${organization} Contable. All rights reserved.`
+
   return (
-    <footer className='max-w-9xl px-5 md:px-10 pt-8 pb-12 mx-auto flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
+    <footer className='max-w-9xl px-5 md:px-10 pt-8 pb-12 mx-auto mt-32 flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
       <div className='w-full mx-auto flex flex-col md:flex-row-reverse justify-center md:justify-between items-center gap-y-8'>
-        <div className='underline'>
+        <div className='underline text-lg md:text-2xl'>
           <NextLink
             href='mailto:info@d55psg.com'
             target='_blank'
@@ -29,23 +34,24 @@ export default function Footer () {
           <NextLink href='/'>
             <Image
               src='/images/d55psg-logomark-bg.svg'
-              alt='Taxo Contable logotype'
+              alt={logoAlt}
               width={36}
               height={36}
             />
           </NextLink>
-          Copyright 2023 D55PSG Contable. All rights reserved.
+          {copyright}
         </div>
       </div>
       <nav className='w-full flex flex-col md:flex-row justify-between gap-4 text-sm text-center text-zinc-600'>
-        {[NAV.home, NAV.solutions, NAV.strategy, NAV.why].map(({ children, href }, key) => (
-          <NextLink href={href} key={key}>
-            {children}
+        {NAV_LIST.map((navItem, key) => (
+          <NextLink
+            className='last:hidden last:md:block'
+            href={navItem.href}
+            key={key}
+          >
+            {navItem.children}
           </NextLink>
         ))}
-        <NextLink className='hidden md:block' href={NAV.contact.href}>
-          {NAV.contact.children}
-        </NextLink>
       </nav>
     </footer>
   )

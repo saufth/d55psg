@@ -3,12 +3,13 @@ import CallToAction from './CallToAction'
 import Image from 'next/image'
 import Link from './core/Link'
 import NextLink from 'next/link'
-import Menu from './core/Menu'
+import Menu from './Menu'
 import MenuButton from '../input/core/MenuButton'
-// Config
-import { NAV } from '@/modules/navigation/config'
 // Animation
 import { useCycle } from 'framer-motion'
+// Config
+import { NAV } from '@/modules/navigation/config'
+import { logoAlt } from '@/modules/data-display/config'
 
 /**
  * The main navbar of the application
@@ -29,7 +30,7 @@ export default function Navbar () {
           <NextLink href={NAV.home.href} onClick={closeToggle}>
             <Image
               src='/images/d55psg-logomark-bg.svg'
-              alt='D55PSG logotype'
+              alt={logoAlt}
               className='w-auto h-12'
               width={48}
               height={48}

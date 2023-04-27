@@ -1,38 +1,81 @@
 // Components
 import ServiceCard from '@/components/data-display/ServiceCard'
 import { ServiceCardProps } from '@/types/data-dislay'
+// Config
+import { organization } from '@/modules/app/config'
+// Types
+import type { Dimensionable } from '@/types/sizing'
+
+/** The size of the image */
+const IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
+  width: 620,
+  height: 467
+})
+
+const SERV_HEADINGS = Object.freeze({
+  consulting: 'Consultoría y asesoría de negocios',
+  model: 'Planeación y desarrollo de modelos de negocio',
+  strategy: 'Planeación y desarrollo de estrategias de negocio',
+  coaching: 'Coaching empresarial',
+  study: 'Investigación estratégica de mercado',
+  opinion: 'Segunda opinión experta'
+})
 
 /** Hero description */
-const services: Readonly<ServiceCardProps[]> = Object.freeze([
+const SERVICES: Readonly<ServiceCardProps[]> = Object.freeze([
   {
-    heading: 'Consultoría y asesoría de negocios',
+    heading: SERV_HEADINGS.consulting,
     description: 'Ofrecemos servicios de consultoría y asesoría empresarial para ayudarte a optimizar la estrategia de tu negocio, mejorar la eficiencia operativa y desarrollar soluciones innovadoras que te permitan crecer y prosperar en el mercado.',
-    image: 'consulting.jpg'
+    image: {
+      name: 'consulting.jpg',
+      alt: `${organization} ${SERV_HEADINGS.consulting}`,
+      ...IMG_SIZE
+    }
   },
   {
-    heading: 'Planeación y desarrollo de modelos de negocio',
+    heading: SERV_HEADINGS.model,
     description: 'Nuestros servicios de planeación y desarrollo de modelos de negocio te ayudarán a definir tu propuesta de valor, identificar oportunidades de mercado y diseñar un modelo de negocio efectivo y sostenible que te permita alcanzar tus objetivos empresariales.',
-    image: 'business-model.jpg'
+    image: {
+      name: 'business-model.jpg',
+      alt: `${organization} ${SERV_HEADINGS.model}`,
+      ...IMG_SIZE
+    }
   },
   {
-    heading: 'Planeación y desarrollo de estrategias de negocio',
+    heading: SERV_HEADINGS.strategy,
     description: 'Ofrecemos servicios de planeación y desarrollo de estrategias empresariales que te ayudarán a definir tus objetivos, identificar oportunidades y desarrollar planes de acción concretos para lograr el éxito en el mercado.',
-    image: 'business-strategy.jpg'
+    image: {
+      name: 'business-strategy.jpg',
+      alt: `${organization} ${SERV_HEADINGS.strategy}`,
+      ...IMG_SIZE
+    }
   },
   {
-    heading: 'Coaching empresarial',
+    heading: SERV_HEADINGS.coaching,
     description: 'Nuestros servicios de coaching empresarial te brindarán el apoyo y la orientación personalizada que necesitas para mejorar tus habilidades de liderazgo, gestión y toma de decisiones, y ayudarte a lograr tus objetivos empresariales.',
-    image: 'coaching.jpg'
+    image: {
+      name: 'coaching.jpg',
+      alt: `${organization} ${SERV_HEADINGS.coaching}`,
+      ...IMG_SIZE
+    }
   },
   {
-    heading: 'Investigación estratégica de mercado',
+    heading: SERV_HEADINGS.study,
     description: 'Ofrecemos servicios de investigación de mercado personalizados para ayudarte a comprender mejor a tus clientes, identificar oportunidades de mercado y desarrollar estrategias de marketing efectivas.',
-    image: 'market-study.jpg'
+    image: {
+      name: 'market-study.jpg',
+      alt: `${organization} ${SERV_HEADINGS.study}`,
+      ...IMG_SIZE
+    }
   },
   {
-    heading: 'Segunda opinión experta',
+    heading: SERV_HEADINGS.opinion,
     description: 'Nuestros servicios de segunda opinión experta te proporcionarán una evaluación independiente y objetiva de cualquier aspecto de tu negocio, ayudándote a validar o cuestionar decisiones importantes y a tomar medidas efectivas para optimizar el rendimiento empresarial.',
-    image: 'second-opinion.jpg'
+    image: {
+      name: 'second-opinion.jpg',
+      alt: `${organization} ${SERV_HEADINGS.opinion}`,
+      ...IMG_SIZE
+    }
   }
 ])
 
@@ -53,7 +96,7 @@ export default function Solutions () {
           </h2>
         </header>
         <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:gap-x-5 gap-y-20 items-start justify-start'>
-          {services.map((service, key) => (
+          {SERVICES.map((service, key) => (
             <ServiceCard
               heading={service.heading}
               description={service.description}
