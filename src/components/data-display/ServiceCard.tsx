@@ -23,9 +23,7 @@ export default function ServiceCard ({ heading, description, image }: ServiceCar
         <div className='text-3xl leading-none font-bebaspro-bold md:text-4xl'>
           {heading}
         </div>
-        <div className='text-primary md:text-base'>
-          {description}
-        </div>
+        {description ? <div className='text-primary md:text-base'>{description}</div> : null}
       </div>
     </div>
   )

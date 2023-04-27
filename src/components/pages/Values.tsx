@@ -12,7 +12,8 @@ const IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
   height: 500
 })
 
-const STRATEGY: Readonly<ShowcaseProps[]> = Object.freeze([
+/** Our values section configuration */
+const VALUES: Readonly<ShowcaseProps[]> = Object.freeze([
   {
     heading: 'Excelencia',
     description: 'Nos esforzamos por alcanzar la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta el servicio al cliente.',
@@ -79,17 +80,16 @@ const STRATEGY: Readonly<ShowcaseProps[]> = Object.freeze([
 ])
 
 /**
-* The Strategy section of the application
-* @returns The Strategy component
+* The Values section of the application
+* @returns The Values component
 */
-export default function Strategy () {
+export default function Values () {
   return (
     <>
       <About
-        id='strategy'
-        heading='En D55PSG, nuestros valores son fundamentales'
-        description='Nuestra estrategia'
-        showcases={STRATEGY}
+        id='values'
+        heading='En D55, nuestros valores son la brujula que guia nuestro dia a dia. Te presentamos los mas importantes para nosotros.'
+        showcases={VALUES}
       />
     </>
   )

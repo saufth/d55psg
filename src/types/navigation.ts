@@ -8,6 +8,6 @@ export interface LinkProps extends Parent<string> {
 
 /** Used for navigation configuration */
 export interface Navigable {
-  /** Navigation section properties */
+  /** Navigation item properties */
   [key: string]: LinkProps
 }

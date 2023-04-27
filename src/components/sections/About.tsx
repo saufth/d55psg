@@ -22,7 +22,7 @@ export default function About ({ id, heading, description, showcases }: AboutPro
     <section id={id} className='max-w-9xl px-[5%] mx-auto py-32'>
       <div className='px-10 lg:px-[9%]'>
         <header className='space-y-2'>
-          <p className='text-sky-700'>{description}</p>
+          {description ? <p className='text-sky-700'>{description}</p> : null}
           <h2>{heading}</h2>
         </header>
         <div className='mt-24 md:mt-36 space-y-20 md:space-y-32'>

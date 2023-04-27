@@ -1,7 +1,7 @@
 // Components
 import Hero from '@/components/pages/Hero'
 import Solutions from '@/components/pages/Solutions'
-import Strategy from '@/components/pages/Strategy'
+import Values from '@/components/pages/Values'
 
 /**
 * The Home page of the application
@@ -12,7 +12,7 @@ export default function HomePage () {
     <>
       <Hero />
       <Solutions />
-      <Strategy />
+      <Values />
     </>
   )
 }

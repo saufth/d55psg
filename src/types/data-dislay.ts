@@ -5,7 +5,7 @@ export interface HeaderProps {
   /** Header heading */
   heading: string
   /** Header description */
-  description: string
+  description?: string
 }
 
 /** Image properties */

@@ -27,9 +27,7 @@ export default function Showcase (
             <h3 className='text-sky-700'>
               {heading}
             </h3>
-            <p className='text-base md:text-lg'>
-              {description}
-            </p>
+            {description ? <p className='text-base md:text-lg'>{description}</p> : null}
           </div>
         </div>
       </div>

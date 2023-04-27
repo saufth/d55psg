@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 /** Hero description */
-const description = 'Desarrollamos estrategias y tacticas que sean productivas y autosustentables a corto, mediano y largo plazo.'
+const description = 'Desarrollamos estrategias y tacticas productivas y autosustentables a corto, mediano y largo plazo.'
 /**
 * The hero section component
 * @returns The Hero component
