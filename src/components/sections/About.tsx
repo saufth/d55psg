@@ -20,7 +20,7 @@ export interface AboutProps extends HeaderProps {
  */
 export default function About ({ id, heading, description, showcases }: AboutProps) {
   return (
-    <section id={id} className='max-w-9xl px-[5%] mx-auto py-32'>
+    <section id={id} className='max-w-8xl px-[5%] mx-auto py-32'>
       <div className='px-10 lg:px-[9%]'>
         <header className='space-y-2'>
           {description ? <Label>{description}</Label> : null}

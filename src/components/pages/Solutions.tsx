@@ -13,9 +13,9 @@ const IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
   height: 467
 })
 
-const SERV_HEADINGS = Object.freeze({
-  consulting: 'Consultoría y asesoría de negocios',
-  model: 'Planeación y desarrollo de modelos de negocio',
+const HEADINGS = Object.freeze({
+  consulting: 'Consultoría en estrategias de negocios',
+  model: 'Desarrollo de modelos de negocio',
   strategy: 'Planeación y desarrollo de estrategias de negocio',
   coaching: 'Coaching empresarial',
   study: 'Investigación estratégica de mercado',
@@ -25,56 +25,56 @@ const SERV_HEADINGS = Object.freeze({
 /** Hero description */
 const SERVICES: Readonly<ServiceCardProps[]> = Object.freeze([
   {
-    heading: SERV_HEADINGS.consulting,
-    description: 'Ofrecemos servicios de consultoría y asesoría empresarial para ayudarte a optimizar la estrategia de tu negocio, mejorar la eficiencia operativa y desarrollar soluciones innovadoras que te permitan crecer y prosperar en el mercado.',
+    heading: HEADINGS.consulting,
+    description: 'Nuestro servicio de consultoria en estrategias de negocio está diseñado para facilitar el alcance de ese objetivo deseado de forma más eficiente y productiva posible en pro de tu empresa.',
     image: {
       name: 'consulting.jpg',
-      alt: `${organization} ${SERV_HEADINGS.consulting}`,
+      alt: `${organization} ${HEADINGS.consulting}`,
       ...IMG_SIZE
     }
   },
   {
-    heading: SERV_HEADINGS.model,
-    description: 'Nuestros servicios de planeación y desarrollo de modelos de negocio te ayudarán a definir tu propuesta de valor, identificar oportunidades de mercado y diseñar un modelo de negocio efectivo y sostenible que te permita alcanzar tus objetivos empresariales.',
+    heading: HEADINGS.model,
+    description: 'Nuestro servicio de desarrollo de modelos de negocio te ayudará a definir propuestas de valor efectivas y sostenibles que te permitan distinguirte dentro del mercado.',
     image: {
       name: 'business-model.jpg',
-      alt: `${organization} ${SERV_HEADINGS.model}`,
+      alt: `${organization} ${HEADINGS.model}`,
       ...IMG_SIZE
     }
   },
   {
-    heading: SERV_HEADINGS.strategy,
+    heading: HEADINGS.strategy,
     description: 'Ofrecemos servicios de planeación y desarrollo de estrategias empresariales que te ayudarán a definir tus objetivos, identificar oportunidades y desarrollar planes de acción concretos para lograr el éxito en el mercado.',
     image: {
       name: 'business-strategy.jpg',
-      alt: `${organization} ${SERV_HEADINGS.strategy}`,
+      alt: `${organization} ${HEADINGS.strategy}`,
       ...IMG_SIZE
     }
   },
   {
-    heading: SERV_HEADINGS.coaching,
+    heading: HEADINGS.coaching,
     description: 'Nuestros servicios de coaching empresarial te brindarán el apoyo y la orientación personalizada que necesitas para mejorar tus habilidades de liderazgo, gestión y toma de decisiones, y ayudarte a lograr tus objetivos empresariales.',
     image: {
       name: 'coaching.jpg',
-      alt: `${organization} ${SERV_HEADINGS.coaching}`,
+      alt: `${organization} ${HEADINGS.coaching}`,
       ...IMG_SIZE
     }
   },
   {
-    heading: SERV_HEADINGS.study,
+    heading: HEADINGS.study,
     description: 'Ofrecemos servicios de investigación de mercado personalizados para ayudarte a comprender mejor a tus clientes, identificar oportunidades de mercado y desarrollar estrategias de marketing efectivas.',
     image: {
       name: 'market-study.jpg',
-      alt: `${organization} ${SERV_HEADINGS.study}`,
+      alt: `${organization} ${HEADINGS.study}`,
       ...IMG_SIZE
     }
   },
   {
-    heading: SERV_HEADINGS.opinion,
+    heading: HEADINGS.opinion,
     description: 'Nuestros servicios de segunda opinión experta te proporcionarán una evaluación independiente y objetiva de cualquier aspecto de tu negocio, ayudándote a validar o cuestionar decisiones importantes y a tomar medidas efectivas para optimizar el rendimiento empresarial.',
     image: {
       name: 'second-opinion.jpg',
-      alt: `${organization} ${SERV_HEADINGS.opinion}`,
+      alt: `${organization} ${HEADINGS.opinion}`,
       ...IMG_SIZE
     }
   }
@@ -93,9 +93,9 @@ export default function Solutions () {
             Nuestras soluciones
           </Label>
           <h2>
-            Nuestras soluciones están orientadas a generar valor mientras nos convertimos en
-            un aliado estratégico que determine la rentabilidad y el éxito de las empresas de
-            nuestros clientes.
+            D55 esta orientado a generar propuestas de valor para sus clientes. Nuestro ideal es
+            convertirnos en un aliado estratégico que sea determinante en la rentabilidad y el
+            éxito de sus empresas.
           </h2>
         </header>
         <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:gap-x-5 gap-y-20 items-start justify-start'>

@@ -2,7 +2,7 @@
 export default function HistoryPage () {
   return (
     <section id='reason-why' className='px-[4%]'>
-      <div className='px-10 md:px-[9%] space-y-6 my-32'>
+      <div className='max-w-8xl px-10 md:px-[9%] mx-auto my-32 space-y-6'>
         <header>
           <h2>
             Historia y razón de ser

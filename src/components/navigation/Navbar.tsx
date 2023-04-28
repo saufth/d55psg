@@ -26,7 +26,7 @@ export default function Navbar () {
   return (
     <>
       <header className='fixed top-0 left-0 right-0 z-70 bg-white/60 backdrop-filter backdrop-blur'>
-        <div className='max-w-9xl h-24 px-[5%] md:px-[7%] md:py-4 lg:py-5 mx-auto flex justify-between items-center'>
+        <div className='max-w-8xl h-24 px-[5%] md:px-[7%] md:py-4 lg:py-5 mx-auto flex justify-between items-center'>
           <NextLink href={NAV.home.href} onClick={closeToggle}>
             <Image
               className='w-auto h-10 md:h-12'
