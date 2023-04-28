@@ -10,7 +10,7 @@ import type { LinkProps } from '@/types/navigation'
 export default function Link ({ children, href }: LinkProps) {
   return (
     <NextLink
-      className='hidden md:block font-unineue-bold text-sm text-zinc-800 hover:text-primary transition-colors'
+      className='font-unineue-bold text-sm text-zinc-800 hover:text-primary transition-colors'
       href={href}
     >
       {children}

@@ -40,9 +40,11 @@ export default function Navbar () {
 
           {[NAV.solutions, NAV.strategy, NAV.why].map(({ children, href }, key) => {
             return (
-              <Link href={href} key={key}>
-                {children}
-              </Link>
+              <div className='hidden lg:block' key={key}>
+                <Link href={href}>
+                  {children}
+                </Link>
+              </div>
             )
           })}
 
