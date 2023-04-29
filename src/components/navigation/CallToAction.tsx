@@ -1,20 +1,21 @@
-// Config
-import { NAV } from '@/modules/navigation/config'
-import { THEME } from '@/modules/theme/config'
+// Components
+import Button from '@/components/input/core/Button'
 // Types
 import type { Themeable } from '@/types/theme'
-import LinkButton from './core/LinkButton'
+
+/** The main call to action of the application */
+const callToAction = () => alert('Call to action!')
 
 /**
- * The main call to action link of the application
+ * The main call to action component of the application
  * @see {@link Themeable} for props specification
  * @param Themeable The component props
  * @returns The CallToAction component
  */
-export default function CallToAction ({ theme = THEME.primary }: Themeable) {
+export default function CallToAction ({ theme }: Themeable) {
   return (
-    <LinkButton href={NAV.contact.href} theme={theme}>
-      {NAV.contact.children}
-    </LinkButton>
+    <Button action={callToAction} theme={theme}>
+      Call to action!
+    </Button>
   )
 }

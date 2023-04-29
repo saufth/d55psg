@@ -2,15 +2,7 @@
 import Label from '../data-display/Label'
 import Showcase from '../data-display/Showcase'
 // Types
-import type { HeaderProps, ShowcaseProps } from '@/types/data-dislay'
-
-/** About component props */
-export interface AboutProps extends HeaderProps {
-  /** Section id */
-  id: string
-  /** Section showcases */
-  showcases: Readonly<ShowcaseProps[]>
-}
+import type { AboutProps } from '@/types/sections'
 
 /**
  * A section using for show cases about something

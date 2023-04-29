@@ -1,5 +1,5 @@
 // Components
-import CallToAction from './CallToAction'
+import CallToAction from './LinkToAction'
 import NextLink from 'next/link'
 // Hooks
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
@@ -8,13 +8,7 @@ import { motion } from 'framer-motion'
 // Config
 import { NAV } from '@/modules/navigation/config'
 // Types
-import type { Actionable } from '@/types/input'
-
-/** Menu component props */
-export interface MenuProps extends Actionable {
-  /** Menu status */
-  isOpen: boolean
-}
+import type { MenuProps } from '@/types/navigation'
 
 /** Background animation variants */
 const backgroundVariants = {
@@ -55,8 +49,8 @@ const navVariants = {
 }
 
 /**
- * The main menu of application
- * @returns Menu component
+ * The main menu component of the application
+ * @returns The Menu component
  */
 export default function Menu ({ isOpen, action }: MenuProps) {
   // Animation

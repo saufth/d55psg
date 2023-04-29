@@ -1,7 +1,7 @@
 // Components
-import { ServiceCardProps } from '@/types/data-dislay'
-// Types
 import Image from 'next/image'
+// Types
+import type { ServiceCardProps } from '@/types/data-dislay'
 
 /**
 * A simple service card component

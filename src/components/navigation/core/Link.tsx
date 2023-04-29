@@ -4,7 +4,7 @@ import NextLink from 'next/link'
 import type { LinkProps } from '@/types/navigation'
 
 /**
- * A simple link for navigation
+ * A simple link component for navigation
  * @returns The Link component
  */
 export default function Link ({ children, href }: LinkProps) {

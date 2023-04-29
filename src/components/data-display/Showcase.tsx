@@ -1,21 +1,15 @@
+// Components
+import Image from 'next/image'
 // Types
 import type { ShowcaseProps } from '@/types/data-dislay'
-import Image from 'next/image'
 
 /**
- * Using to show a image with a heading and description
+ * Used to show a image with a header
  * @see {@link ShowcaseProps} for props specifications
  * @param ShowcaseProps The component props
  * @returns The Showcase component
  */
-export default function Showcase (
-  {
-    heading,
-    description,
-    image,
-    reverse
-  }: ShowcaseProps
-) {
+export default function Showcase ({ heading, description, image, reverse }: ShowcaseProps) {
   const containerReverseStyle = reverse ? 'md:flex-row-reverse' : ''
   const imageSrc = `/images/sections/${image.name}`
 

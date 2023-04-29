@@ -1,5 +1,5 @@
 // Components
-import CallToAction from '../navigation/CallToAction'
+import CallToAction from '../navigation/LinkToAction'
 import Image from 'next/image'
 import NextLink from 'next/link'
 // Config

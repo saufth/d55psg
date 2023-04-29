@@ -1,5 +1,5 @@
 // Components
-import CallToAction from './CallToAction'
+import CallToAction from './LinkToAction'
 import Image from 'next/image'
 import Link from './core/Link'
 import NextLink from 'next/link'
@@ -12,7 +12,7 @@ import { NAV } from '@/modules/navigation/config'
 import { logoAlt } from '@/modules/data-display/config'
 
 /**
- * The main navbar of the application
+ * The main navbar component of the application
  * @returns The Navbar component
  */
 export default function Navbar () {

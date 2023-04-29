@@ -27,3 +27,6 @@ export const NAV: Readonly<Navigable> = Object.freeze({
 
 /** The navigation configuration list */
 export const NAV_LIST: Readonly<LinkProps[]> = Object.freeze(Object.values(NAV))
+
+/** The link to action properties */
+export const linkToAction: Readonly<LinkProps> = Object.freeze(NAV.contact)
