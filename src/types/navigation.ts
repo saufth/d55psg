@@ -1,4 +1,6 @@
-import { Parent } from './layout'
+// Types
+import type { List } from './data-dislay'
+import type { Parent } from './layout'
 
 /** Link properties */
 export interface LinkProps extends Parent<string> {
@@ -7,7 +9,4 @@ export interface LinkProps extends Parent<string> {
 }
 
 /** Used for navigation configuration */
-export interface Navigable {
-  /** Navigation item properties */
-  [key: string]: LinkProps
-}
+export type Navigable = List<LinkProps>

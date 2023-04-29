@@ -1,4 +1,11 @@
-import { Dimensionable } from './sizing'
+// Types
+import type { Dimensionable } from './sizing'
+
+/** Generic key and value list type */
+export interface List<T> {
+  /** Item list */
+  [key: string]: T
+}
 
 /** Header properties */
 export interface HeaderProps {
@@ -7,6 +14,9 @@ export interface HeaderProps {
   /** Header description */
   description?: string
 }
+
+/** Header list */
+export type HeaderList = List<HeaderProps>
 
 /** Image properties */
 export interface ImageProps extends Dimensionable {
