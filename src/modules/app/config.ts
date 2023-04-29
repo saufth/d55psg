@@ -8,7 +8,7 @@ export const baseUrl = process.env.HOST
 export const organization = 'D55PSG'
 
 /** The head desciption of the application */
-export const description = 'Professional Service Group'
+export const description = 'Escala tu empresa al siguiente nivel con estrategias y tácticas innovadoras'
 
 /** The keyword list of the application */
 export const KEYWORDS = Object.freeze([

@@ -14,7 +14,7 @@ const IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
 })
 
 const HEADINGS = Object.freeze({
-  consulting: 'Consultoría en estrategias de negocios',
+  consulting: 'Consultoría y asesoría de negocios',
   model: 'Desarrollo de modelos de negocio',
   strategy: 'Planeación y desarrollo de estrategias de negocio',
   coaching: 'Coaching empresarial',
@@ -26,7 +26,7 @@ const HEADINGS = Object.freeze({
 const SERVICES: Readonly<ServiceCardProps[]> = Object.freeze([
   {
     heading: HEADINGS.consulting,
-    description: 'Nuestro servicio de consultoria en estrategias de negocio está diseñado para facilitar el alcance de ese objetivo deseado de forma más eficiente y productiva posible en pro de tu empresa.',
+    description: 'Ofrecemos servicios de consultoría y asesoría empresarial para ayudarte a optimizar la estrategia de tu negocio, mejorar la eficiencia operativa y desarrollar soluciones innovadoras que te permitan crecer y prosperar en el mercado.',
     image: {
       name: 'consulting.jpg',
       alt: `${organization} ${HEADINGS.consulting}`,
