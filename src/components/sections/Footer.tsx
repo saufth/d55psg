@@ -5,16 +5,13 @@ import NextLink from 'next/link'
 // Config
 import { logoAlt } from '@/modules/data-display/config'
 import { NAV_LIST } from '@/modules/navigation/config'
-import { organization } from '@/modules/app/config'
+import { copyright, email } from '@/modules/app/config'
 
 /**
  * The footer section of application
  * @returns Footer section component
  */
 export default function Footer () {
-  // Config
-  const copyright = `Copyright 2023 ${organization} Contable. All rights reserved.`
-
   return (
     <footer className='max-w-8xl px-5 md:px-10 pt-8 pb-12 mx-auto flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
       <div className='w-full mx-auto flex flex-col md:flex-row-reverse justify-center md:justify-between items-center gap-y-8'>
@@ -24,7 +21,7 @@ export default function Footer () {
             target='_blank'
             rel='noreferrer'
           >
-            contacto@d55psg.com
+            {email}
           </NextLink>
         </div>
         <div className='md:hidden'>

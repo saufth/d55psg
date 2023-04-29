@@ -10,6 +10,7 @@ import { useCycle } from 'framer-motion'
 // Config
 import { NAV } from '@/modules/navigation/config'
 import { logoAlt } from '@/modules/data-display/config'
+import { THEME } from '@/modules/theme/config'
 
 /**
  * The main navbar component of the application
@@ -41,7 +42,7 @@ export default function Navbar () {
           {[NAV.solutions, NAV.strategy, NAV.why].map(({ children, href }, key) => {
             return (
               <div className='hidden lg:block' key={key}>
-                <Link href={href}>
+                <Link href={href} size='sm' theme={THEME.secondary}>
                   {children}
                 </Link>
               </div>

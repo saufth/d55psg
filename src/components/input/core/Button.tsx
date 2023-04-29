@@ -11,6 +11,7 @@ import styles from '@/styles/Button.module.css'
  * @see {@link ButtonProps} for props specification
  * @param ButtonProps The component props
  * @returns The Button component
+ *
  * @default type 'button'
  * @default theme 'primary'
  */

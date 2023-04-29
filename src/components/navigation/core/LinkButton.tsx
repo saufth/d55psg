@@ -12,6 +12,7 @@ import styles from '@/styles/Button.module.css'
  * @see {@link LinkButtonProps} for props specification
  * @param LinkButtonProps The component props
  * @returns The LinkButton component
+ *
  * @default theme 'primary'
  */
 export default function LinkButton ({ children, href, theme = THEME.primary }: LinkButtonProps) {

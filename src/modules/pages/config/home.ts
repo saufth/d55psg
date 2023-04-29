@@ -1,5 +1,5 @@
 // Config
-import { SERVICES, organization } from '../app/config'
+import { SERVICES, VALUES, organization } from '../../app/config'
 // Types
 import type { Dimensionable } from '@/types/sizing'
 import type { ServiceCardProps, ShowcaseProps } from '@/types/data-dislay'
@@ -81,67 +81,67 @@ export const VALUES_IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
 })
 
 /** Our values section configuration */
-export const VALUES: Readonly<ShowcaseProps[]> = Object.freeze([
+export const VALUES_CONFIG: Readonly<ShowcaseProps[]> = Object.freeze([
   {
-    heading: 'Excelencia',
-    description: 'Nos esforzamos por alcanzar la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta el servicio al cliente.',
+    heading: VALUES.excellence.heading,
+    description: VALUES.excellence.description,
     image: {
       name: 'excellence.svg',
-      alt: `${organization} Excelencia`,
+      alt: `${organization} ${VALUES.excellence.heading}`,
       ...VALUES_IMG_SIZE
     }
   },
   {
-    heading: 'Integridad',
-    description: 'Actuamos con honestidad y ética en todas las relaciones comerciales y personales.',
+    heading: VALUES.integrity.heading,
+    description: VALUES.integrity.description,
     image: {
       name: 'integrity.svg',
-      alt: `${organization} Integridad`,
+      alt: `${organization} ${VALUES.integrity.heading}`,
       ...VALUES_IMG_SIZE
     }
   },
   {
-    heading: 'Innovación',
-    description: 'Buscamos export constantemente nuevas soluciones y métodos creativos para superar los desafíos y las expectativas del mercado.',
+    heading: VALUES.innovation.heading,
+    description: VALUES.innovation.description,
     image: {
       name: 'innovation.svg',
-      alt: `${organization} Innovación`,
+      alt: `${organization} ${VALUES.innovation.heading}`,
       ...VALUES_IMG_SIZE
     }
   },
   {
-    heading: 'Compromiso con el cliente',
-    description: 'Estamos dedicados a proporcionar el mejor servicio posible a nuestros clientes, ofreciendo soluciones personalizadas y orientadas a resultados.',
+    heading: VALUES.commitment.heading,
+    description: VALUES.commitment.description,
     image: {
       name: 'commitment.svg',
-      alt: `${organization} Compromiso con el cliente`,
+      alt: `${organization} ${VALUES.commitment.heading}`,
       ...VALUES_IMG_SIZE
     }
   },
   {
-    heading: 'Trabajo en equipo',
-    description: 'Valoramos y respetamos las contribuciones de cada miembro del equipo, trabajando juntos para alcanzar objetivos compartidos.',
+    heading: VALUES.teamwork.heading,
+    description: VALUES.teamwork.description,
     image: {
       name: 'teamwork.svg',
-      alt: `${organization} Trabajo en equipo`,
+      alt: `${organization} ${VALUES.teamwork.heading}`,
       ...VALUES_IMG_SIZE
     }
   },
   {
-    heading: 'Responsabilidad social',
-    description: 'Nos preocupamos por el impacto ambiental y social de nuestras operaciones y nos comprometemos a ser una empresa socialmente responsable.',
+    heading: VALUES.responsability.heading,
+    description: VALUES.responsability.description,
     image: {
       name: 'responsability.svg',
-      alt: `${organization} Responsabilidad social`,
+      alt: `${organization} ${VALUES.responsability.heading}`,
       ...VALUES_IMG_SIZE
     }
   },
   {
-    heading: 'Crecimiento personal y profesional',
-    description: 'Nos comprometemos a proporcionar un ambiente de trabajo que promueva el crecimiento personal y profesional de nuestros empleados.',
+    heading: VALUES.growth.heading,
+    description: VALUES.growth.description,
     image: {
       name: 'growth.svg',
-      alt: `${organization} Crecimiento personal y profesional`,
+      alt: `${organization} ${VALUES.growth.heading}`,
       ...VALUES_IMG_SIZE
     }
   }

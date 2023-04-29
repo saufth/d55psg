@@ -1,5 +1,5 @@
 // Components
-import Footer from '@/components/pages/Footer'
+import Footer from '@/components/sections/Footer'
 import GSearchSchemaScript from './GSearchSchemaScript'
 import Head from 'next/head'
 import Navbar from '@/components/navigation/Navbar'

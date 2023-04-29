@@ -7,10 +7,10 @@ import ServiceCard from '@/components/data-display/ServiceCard'
 import { description } from '@/modules/app/config'
 import {
   SOLUTIONS_CONFIG,
-  VALUES,
+  VALUES_CONFIG,
   heroDescription,
   imageHeroAlt
-} from '@/modules/sections/config'
+} from '@/modules/pages/config/home'
 
 /**
 * The Home page of the application
@@ -68,11 +68,11 @@ export default function HomePage () {
             </h2>
           </header>
           <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:gap-x-5 gap-y-20 items-start justify-start'>
-            {SOLUTIONS_CONFIG.map((service, key) => (
+            {SOLUTIONS_CONFIG.map((solution, key) => (
               <ServiceCard
-                heading={service.heading}
-                description={service.description}
-                image={service.image}
+                heading={solution.heading}
+                description={solution.description}
+                image={solution.image}
                 key={key}
               />
             ))}
@@ -84,7 +84,7 @@ export default function HomePage () {
         id='values'
         heading='En D55, nuestros valores son la brújula que guía nuestro día a día. Te presentamos los más importantes para nosotros.'
         description='Nuestros valores'
-        showcases={VALUES}
+        showcases={VALUES_CONFIG}
       />
     </>
   )

@@ -48,6 +48,12 @@ const navVariants = {
   }
 }
 
+/** Menu state configuration */
+const MENU_STATE = Object.freeze({
+  open: 'open',
+  closed: 'closed'
+})
+
 /**
  * The main menu component of the application
  * @returns The Menu component
@@ -59,7 +65,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
   return (
     <motion.div
       initial={false}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ? MENU_STATE.open : MENU_STATE.closed}
       custom={width}
     >
       <motion.nav
