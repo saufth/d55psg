@@ -1,6 +1,6 @@
 // Components
 import About from '@/components/sections/About'
-import Label from '@/components/data-display/Label'
+import Tagline from '@/components/data-display/core/Tagline'
 import Image from 'next/image'
 import ServiceCard from '@/components/data-display/ServiceCard'
 // Config
@@ -35,9 +35,9 @@ export default function HomePage () {
                 />
               </div>
               <div className='w-full md:w-1/2 lg:mt-12 space-y-3'>
-                <Label>
+                <Tagline>
                   D55 Professional Services Group
-                </Label>
+                </Tagline>
                 <h1>
                   {description}
                 </h1>
@@ -58,9 +58,9 @@ export default function HomePage () {
       <section id='solutions' className='px-[4%] py-32 mt-32 bg-zinc-50'>
         <div className='px-10 lg:px-[9%] flex flex-col lg:flex-row gap-y-20 lg:gap-x-20'>
           <header className='md:w-xl space-y-2'>
-            <Label>
+            <Tagline>
               Nuestras soluciones
-            </Label>
+            </Tagline>
             <h2>
               D55 esta orientado a generar propuestas de valor para sus clientes. Nuestro ideal es
               convertirnos en un aliado estratégico que sea determinante en la rentabilidad y el

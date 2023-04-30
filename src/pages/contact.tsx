@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 // Type
 import type { FormEvent } from 'react'
 import Button from '@/components/input/core/Button'
-import Label from '@/components/data-display/Label'
+import Label from '@/components/data-display/core/Tagline'
 
 /**
 * The contact section of application

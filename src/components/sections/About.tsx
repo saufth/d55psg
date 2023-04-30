@@ -1,5 +1,5 @@
 // Components
-import Label from '../data-display/Label'
+import Label from '../data-display/core/Tagline'
 import Showcase from '../data-display/Showcase'
 // Types
 import type { AboutProps } from '@/types/sections'
