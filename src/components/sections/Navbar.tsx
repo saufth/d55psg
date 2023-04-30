@@ -1,9 +1,9 @@
 // Components
-import CallToAction from './LinkToAction'
+import CallToAction from '../navigation/LinkToAction'
 import Image from 'next/image'
-import Link from './core/Link'
+import Link from '../navigation/core/Link'
 import NextLink from 'next/link'
-import Menu from './Menu'
+import Menu from '../navigation/Menu'
 import MenuButton from '../input/core/MenuButton'
 // Animation
 import { useCycle } from 'framer-motion'

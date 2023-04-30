@@ -1,5 +1,6 @@
 // Types
-import type { Dimensionable } from './sizing'
+import { Parent } from './layout'
+import type { Dimensionable, SizeProps } from './sizing'
 
 /** Generic key and value list type */
 export interface List<T> {
@@ -13,6 +14,8 @@ export interface HeaderProps {
   heading: string
   /** Header description */
   description?: string
+  /** Header tagline */
+  tagline?: string
 }
 
 /** Header list */
@@ -26,14 +29,17 @@ export interface ImageProps extends Dimensionable {
   alt: string
 }
 
-/** The ServiceCard component porperties */
-export interface ServiceCardProps extends HeaderProps {
+/** The Card component porperties */
+export interface CardProps extends HeaderProps {
   /** The image properties */
   image: ImageProps
 }
 
 /** Showcase component props */
-export interface ShowcaseProps extends ServiceCardProps {
+export interface ShowcaseProps extends CardProps {
   /** Invert the order of content */
   reverse?: boolean
 }
+
+/** The tagline componen props */
+export type TaglineProps = Parent<string> & SizeProps

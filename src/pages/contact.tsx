@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 // Type
 import type { FormEvent } from 'react'
 import Button from '@/components/input/core/Button'
-import Label from '@/components/data-display/core/Tagline'
+import Tagline from '@/components/data-display/core/Tagline'
 
 /**
 * The contact section of application
@@ -36,10 +36,10 @@ export default function ContactPage () {
   return (
     <section className='max-w-4xl px-[4%] my-32 mx-auto'>
       <div className='px-10 md:px-[9%] space-y-12'>
-        <div className='space-y-2'>
-          <Label>
+        <div className='space-y-3'>
+          <Tagline>
             ¿Tomamos un café?
-          </Label>
+          </Tagline>
           <h1 className='text-5xl md:text-6xl'>
             Pongamosnos en contacto
           </h1>

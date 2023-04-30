@@ -8,10 +8,16 @@ export const env = process.env.NODE_ENV
 export const baseUrl = process.env.HOST
 
 /** The name of the organization */
-export const organization = 'D55PSG'
+export const organization = 'D55'
+
+/** The alternative name of the organization */
+export const organizationAlt = 'D55PSG'
 
 /** The slogan of the organization */
 export const slogan = 'Profesional Service Group'
+
+/** The nam and slogan of the organization */
+export const organizationSlogan = `${organization} ${slogan}`
 
 /** The head desciption of the application */
 export const description = 'Escala tu empresa al siguiente nivel con estrategias y tácticas innovadoras'
@@ -79,13 +85,17 @@ export const VALUES: HeaderList = Object.freeze({
 /** The email of the organizacion */
 export const email = 'contacto@d55psg.com'
 
+/** Current year */
+const currentYear = new Date().getFullYear()
+
 /** The copyright of the application */
-export const copyright = `Copyright 2023 ${organization} Contable. All rights reserved.`
+export const copyright = `Copyright ${currentYear} ${organizationSlogan}. All rights reserved.`
 
 /** The keyword list of the application */
 export const KEYWORDS = Object.freeze([
-  'd55psg',
+  organization,
   'd55psg group',
+  'd55 professional service group',
   'd55psg professional service group',
   'professional service group',
   'business consulting',
@@ -131,13 +141,13 @@ export const googleSearchSchema = Object.freeze({
     {
       '@type': 'Organization',
       '@id': `${baseUrl}#organization`,
-      name: `${organization}`
+      name: `${organizationSlogan}`
     },
     {
       '@type': 'WebSite',
       '@id': `${baseUrl}#website`,
       url: `${baseUrl}`,
-      name: `${organization}`,
+      name: `${organizationSlogan}`,
       publisher: {
         '@id': `${baseUrl}#organization`
       },
@@ -147,7 +157,7 @@ export const googleSearchSchema = Object.freeze({
       '@type': 'CollectionPage',
       '@id': `${baseUrl}#webpage`,
       url: `${baseUrl}`,
-      name: `${organization}`,
+      name: `${organizationSlogan}`,
       about: {
         '@id': `${baseUrl}#organization`
       },

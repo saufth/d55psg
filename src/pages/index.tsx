@@ -1,16 +1,158 @@
 // Components
 import About from '@/components/sections/About'
-import Tagline from '@/components/data-display/core/Tagline'
+import Card from '@/components/data-display/Card'
 import Image from 'next/image'
-import ServiceCard from '@/components/data-display/ServiceCard'
+import Tagline from '@/components/data-display/core/Tagline'
 // Config
-import { description } from '@/modules/app/config'
 import {
-  SOLUTIONS_CONFIG,
-  VALUES_CONFIG,
-  heroDescription,
-  imageHeroAlt
-} from '@/modules/pages/config/home'
+  SERVICES,
+  VALUES,
+  description,
+  organizationAlt,
+  organizationSlogan
+} from '@/modules/app/config'
+// Types
+import type { Dimensionable } from '@/types/sizing'
+import type { CardProps, ShowcaseProps } from '@/types/data-dislay'
+
+/** The hero header description */
+export const heroDescription = 'Desarrollamos estrategias y tácticas productivas y autosustentables a corto, mediano y largo plazo.'
+
+/** The solution image size */
+export const SOLUTION_IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
+  width: 620,
+  height: 467
+})
+
+/** The solutions section configuration */
+export const SOLUTIONS_CONFIG: Readonly<CardProps[]> = Object.freeze([
+  {
+    heading: SERVICES.consulting.heading,
+    description: SERVICES.consulting.description,
+    image: {
+      name: 'consulting.jpg',
+      alt: `${organizationAlt} ${SERVICES.consulting.heading}`,
+      ...SOLUTION_IMG_SIZE
+    }
+  },
+  {
+    heading: SERVICES.model.heading,
+    description: SERVICES.model.description,
+    image: {
+      name: 'business-model.jpg',
+      alt: `${organizationAlt} ${SERVICES.model.heading}`,
+      ...SOLUTION_IMG_SIZE
+    }
+  },
+  {
+    heading: SERVICES.strategy.heading,
+    description: SERVICES.strategy.description,
+    image: {
+      name: 'business-strategy.jpg',
+      alt: `${organizationAlt} ${SERVICES.strategy.heading}`,
+      ...SOLUTION_IMG_SIZE
+    }
+  },
+  {
+    heading: SERVICES.coaching.heading,
+    description: SERVICES.coaching.description,
+    image: {
+      name: 'coaching.jpg',
+      alt: `${organizationAlt} ${SERVICES.coaching.heading}`,
+      ...SOLUTION_IMG_SIZE
+    }
+  },
+  {
+    heading: SERVICES.study.heading,
+    description: SERVICES.study.description,
+    image: {
+      name: 'market-study.jpg',
+      alt: `${organizationAlt} ${SERVICES.study.heading}`,
+      ...SOLUTION_IMG_SIZE
+    }
+  },
+  {
+    heading: SERVICES.opinion.heading,
+    description: SERVICES.opinion.description,
+    image: {
+      name: 'second-opinion.jpg',
+      alt: `${organizationAlt} ${SERVICES.opinion.heading}`,
+      ...SOLUTION_IMG_SIZE
+    }
+  }
+])
+/** The size of the image */
+export const VALUES_IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
+  width: 500,
+  height: 500
+})
+
+/** Our values section configuration */
+export const VALUES_CONFIG: Readonly<ShowcaseProps[]> = Object.freeze([
+  {
+    heading: VALUES.excellence.heading,
+    description: VALUES.excellence.description,
+    image: {
+      name: 'excellence.svg',
+      alt: `${organizationAlt} ${VALUES.excellence.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  },
+  {
+    heading: VALUES.integrity.heading,
+    description: VALUES.integrity.description,
+    image: {
+      name: 'integrity.svg',
+      alt: `${organizationAlt} ${VALUES.integrity.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  },
+  {
+    heading: VALUES.innovation.heading,
+    description: VALUES.innovation.description,
+    image: {
+      name: 'innovation.svg',
+      alt: `${organizationAlt} ${VALUES.innovation.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  },
+  {
+    heading: VALUES.commitment.heading,
+    description: VALUES.commitment.description,
+    image: {
+      name: 'commitment.svg',
+      alt: `${organizationAlt} ${VALUES.commitment.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  },
+  {
+    heading: VALUES.teamwork.heading,
+    description: VALUES.teamwork.description,
+    image: {
+      name: 'teamwork.svg',
+      alt: `${organizationAlt} ${VALUES.teamwork.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  },
+  {
+    heading: VALUES.responsability.heading,
+    description: VALUES.responsability.description,
+    image: {
+      name: 'responsability.svg',
+      alt: `${organizationAlt} ${VALUES.responsability.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  },
+  {
+    heading: VALUES.growth.heading,
+    description: VALUES.growth.description,
+    image: {
+      name: 'growth.svg',
+      alt: `${organizationAlt} ${VALUES.growth.heading}`,
+      ...VALUES_IMG_SIZE
+    }
+  }
+])
 
 /**
 * The Home page of the application
@@ -27,7 +169,7 @@ export default function HomePage () {
               <div className='w-full md:w-1/2 h-0 lg:h-40 relative'>
                 <Image
                   src='/images/sections/hero.jpg'
-                  alt={imageHeroAlt}
+                  alt={organizationSlogan}
                   className='w-full h-auto absolute top-6 md:top-0 rounded-[24px] md:rounded-3xl'
                   width={620}
                   height={467}
@@ -36,7 +178,7 @@ export default function HomePage () {
               </div>
               <div className='w-full md:w-1/2 lg:mt-12 space-y-3'>
                 <Tagline>
-                  D55 Professional Services Group
+                  {organizationSlogan}
                 </Tagline>
                 <h1>
                   {description}
@@ -57,19 +199,19 @@ export default function HomePage () {
 
       <section id='solutions' className='px-[4%] py-32 mt-32 bg-zinc-50'>
         <div className='px-10 lg:px-[9%] flex flex-col lg:flex-row gap-y-20 lg:gap-x-20'>
-          <header className='md:w-xl space-y-2'>
+          <header className='md:w-xl space-y-3'>
             <Tagline>
               Nuestras soluciones
             </Tagline>
             <h2>
-              D55 esta orientado a generar propuestas de valor para sus clientes. Nuestro ideal es
-              convertirnos en un aliado estratégico que sea determinante en la rentabilidad y el
-              éxito de sus empresas.
+              D55 esta orientado a generar propuestas de valor para sus clientes. Nuestro
+              ideal es convertirnos en un aliado estratégico que sea determinante en la
+              rentabilidad y el éxito de sus empresas.
             </h2>
           </header>
           <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-x-4 lg:gap-x-5 gap-y-20 items-start justify-start'>
             {SOLUTIONS_CONFIG.map((solution, key) => (
-              <ServiceCard
+              <Card
                 heading={solution.heading}
                 description={solution.description}
                 image={solution.image}
@@ -83,7 +225,7 @@ export default function HomePage () {
       <About
         id='values'
         heading='En D55, nuestros valores son la brújula que guía nuestro día a día. Te presentamos los más importantes para nosotros.'
-        description='Nuestros valores'
+        tagline='Nuestros valores'
         showcases={VALUES_CONFIG}
       />
     </>

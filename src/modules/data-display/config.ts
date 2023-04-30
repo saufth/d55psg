@@ -1,5 +1,5 @@
 // Config
-import { organization } from '../app/config'
+import { organizationSlogan } from '../app/config'
 
 // Config
-export const logoAlt = `${organization} logotype`
+export const logoAlt = `${organizationSlogan} logotype`

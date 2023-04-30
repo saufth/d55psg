@@ -1,5 +1,5 @@
 // Components
-import AppLayout from '@/app/components/AppLayout'
+import AppLayout from '@/components/app/AppLayout'
 // Types
 import type { AppProps } from 'next/app'
 // Styles

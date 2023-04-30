@@ -3,11 +3,9 @@ export default function HistoryPage () {
   return (
     <section id='reason-why' className='px-[4%]'>
       <div className='max-w-8xl px-10 md:px-[9%] mx-auto my-32 space-y-6'>
-        <header>
-          <h2>
-            Historia y razón de ser
-          </h2>
-        </header>
+        <h2>
+          Historia y razón de ser
+        </h2>
         <p>
           En 2005, un grupo de consultores empresariales altamente capacitados y con amplia
           experiencia en diferentes industrias, decidieron unirse y crear una empresa de

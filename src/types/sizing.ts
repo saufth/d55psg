@@ -4,6 +4,12 @@ import type { List } from './data-dislay'
 /** Used to define a size property */
 export type Size = 'sm' | 'md' | 'lg'
 
+/** The size properties */
+export interface SizeProps {
+  /** Size property */
+  size?: Size
+}
+
 /** Used for size configuration */
 export type SizeList = List<Size>
 

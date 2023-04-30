@@ -2,21 +2,22 @@
 import Footer from '@/components/sections/Footer'
 import GSearchSchemaScript from './GSearchSchemaScript'
 import Head from 'next/head'
-import Navbar from '@/components/navigation/Navbar'
+import Navbar from '@/components/sections/Navbar'
 // Config
 import {
   baseUrl,
   coverImageUrl,
   description,
   keywords,
-  organization,
+  organizationAlt,
+  organizationSlogan,
   twitter
 } from '../../modules/app/config'
 // Types
 import type { Parent } from '../../types/layout'
 
 export default function AppLayout ({ children } : Parent) {
-  const title = `${organization} – ${description}`
+  const title = `${organizationSlogan} – ${organizationAlt}`
 
   return (
     <>
@@ -37,17 +38,17 @@ export default function AppLayout ({ children } : Parent) {
         <meta name='keywords' content={keywords} />
         <meta property='og:locale' content='es_MX' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content={organization} />
+        <meta property='og:title' content={organizationSlogan} />
         <meta property='og:description' content={description} />
         <meta property='og:url' content={baseUrl} />
-        <meta property='og:site_name' content={organization} />
+        <meta property='og:site_name' content={organizationSlogan} />
         <meta property='og:image' content={coverImageUrl} />
         <meta property='og:image:secure_url' content={coverImageUrl} />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='640' />
         <meta property='og:image:type' content='image/jpeg' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content={organization} />
+        <meta name='twitter:title' content={organizationSlogan} />
         <meta name='twitter:description' content={description} />
         <meta name='twitter:site' content={twitter} />
         <meta name='twitter:image' content={coverImageUrl} />

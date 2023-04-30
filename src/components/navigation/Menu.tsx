@@ -1,12 +1,13 @@
 // Components
 import CallToAction from './LinkToAction'
 import NextLink from 'next/link'
+import Tagline from '../data-display/core/Tagline'
 // Hooks
 import useDimensions from '../../modules/sizing/hooks/useDimensions'
 // Animation
 import { motion } from 'framer-motion'
 // Config
-import { NAV } from '@/modules/navigation/config'
+import { NAV, navAriaLabel } from '@/modules/navigation/config'
 // Types
 import type { MenuProps } from '@/types/navigation'
 
@@ -69,13 +70,13 @@ export default function Menu ({ isOpen, action }: MenuProps) {
       custom={width}
     >
       <motion.nav
-        aria-label='Keyperspot directorio'
+        aria-label={navAriaLabel}
         className='w-full h-screen md:pt-24 fixed top-0 left-0 z-60 overflow-hidden grid place-content-center gap-y-5 md:gap-y-6 text-center'
         variants={navVariants}
       >
-        <span className='font-unineue-book text-sm md:text-base text-primary'>
+        <Tagline size='sm'>
           Menu
-        </span>
+        </Tagline>
 
         {[NAV.home, NAV.solutions, NAV.strategy, NAV.why].map((option, key) => (
           <div className='text-3xl md:text-4xl' onClick={action} key={key}>
@@ -86,7 +87,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
         ))}
 
         <div className='flex justify-center' onClick={action}>
-          <CallToAction theme='secondary' />
+          <CallToAction />
         </div>
       </motion.nav>
 
