@@ -1,7 +1,9 @@
 // Components
-import Footer from '@/components/sections/Footer'
 // eslint-disable-next-line import/no-restricted-paths
 import GoogleSearchScript from './GoogleSearchScript'
+// eslint-disable-next-line import/no-restricted-paths
+import GoogleAnalyticsScript from './GoogleAnalyticsScript'
+import Footer from '@/components/sections/Footer'
 import Head from 'next/head'
 import Navbar from '@/components/sections/Navbar'
 // Config
@@ -66,6 +68,7 @@ export default function AppLayout ({ children } : Parent) {
       </main>
       <Footer />
       <GoogleSearchScript />
+      <GoogleAnalyticsScript />
     </>
   )
 }
