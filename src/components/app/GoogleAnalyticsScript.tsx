@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 /** Google analitycs tacking id */
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_EMAIL_GOOGLE_ANALYTICS
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
 
 /**
  * Add the current page path configuration to google analytics
