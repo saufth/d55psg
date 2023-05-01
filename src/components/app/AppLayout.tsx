@@ -1,6 +1,7 @@
 // Components
 import Footer from '@/components/sections/Footer'
-import GSearchSchemaScript from './GSearchSchemaScript'
+// eslint-disable-next-line import/no-restricted-paths
+import GoogleSearchScript from './GoogleSearchScript'
 import Head from 'next/head'
 import Navbar from '@/components/sections/Navbar'
 // Config
@@ -58,7 +59,7 @@ export default function AppLayout ({ children } : Parent) {
         {children}
       </main>
       <Footer />
-      <GSearchSchemaScript />
+      <GoogleSearchScript />
     </>
   )
 }

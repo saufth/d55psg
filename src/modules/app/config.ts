@@ -130,38 +130,3 @@ export const coverImageUrl = `${baseUrl}cover.jpg`
 
 /** Twitter account */
 export const twitter = '@d55psg'
-
-/** Google seach scheme */
-export const googleSearchSchema = {
-  '@context': 'https://schema.org/',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': `${baseUrl}#organization`,
-      name: `${organizationSlogan}`
-    },
-    {
-      '@type': 'WebSite',
-      '@id': `${baseUrl}#website`,
-      url: `${baseUrl}`,
-      name: `${organizationSlogan}`,
-      publisher: {
-        '@id': `${baseUrl}#organization`
-      },
-      inLanguage: 'es-MX'
-    },
-    {
-      '@type': 'CollectionPage',
-      '@id': `${baseUrl}#webpage`,
-      url: `${baseUrl}`,
-      name: `${organizationSlogan}`,
-      about: {
-        '@id': `${baseUrl}#organization`
-      },
-      isPartOf: {
-        '@id': `${baseUrl}#website`
-      },
-      inLanguage: 'es-MX'
-    }
-  ]
-} as const

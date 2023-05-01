@@ -63,7 +63,7 @@ We could develop our folder structure in this way:
     - ...
 ```
 
-I prefer keep the components on a single folder, using the vertical slice philosofy, the <ins>app</ins> components can contain and export configuration data. Some configuration data is allowed on the <code>modules/app</code> folder, this folder is part of the <ins>domain</ins> layer and its used for <ins>domain</ins> and <ins>pages</ins> layers.
+I prefer keep the components on a single folder, using the vertical slice philosofy, the <ins>app</ins> components can contain and export configuration data. Some configuration data are in the <code>modules/app</code> folder, this folder is part of the <ins>domain</ins> layer and its used for <ins>domain</ins> and <ins>pages</ins> layers.
 
 ### Core
 
@@ -244,6 +244,21 @@ EsLint can help us by adding the following configuration, can automatically warn
       ]
     }
   ]
+}
+```
+
+If you need to use a components on <code>component/app</code> that are in the same folder, add the following comment above the import statement:
+
+```
+// eslint-disable-next-line import/no-restricted-paths
+import GoogleSearchScript from './GoogleSearchScript'
+
+export default AppLayout () {
+  return (
+    <Head>
+      <GoogleSearchScript />
+    </Head>
+  )
 }
 ```
 
