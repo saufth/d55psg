@@ -17,6 +17,12 @@ import {
 // Types
 import type { Parent } from '../../types/layout'
 
+/**
+ * The main application layout
+ * @see {@link Parent} for props specification
+ * @param Parent The component props
+ * @returns the AppLayout component
+ */
 export default function AppLayout ({ children } : Parent) {
   const title = `${organizationSlogan} – ${organizationAlt}`
 
