@@ -1,7 +1,7 @@
 /** The History page of the application */
 export default function HistoryPage () {
   return (
-    <section id='reason-why' className='px-[4%]'>
+    <section id='history' className='px-[4%]'>
       <div className='max-w-8xl px-10 md:px-[9%] mx-auto my-32 space-y-6'>
         <h2>
           Historia y razón de ser

@@ -1,11 +1,12 @@
+// Components
+import Button from '@/components/input/core/Button'
+import Tagline from '@/components/data-display/core/Tagline'
 // React
 import { useRef } from 'react'
 // Services
 import emailjs from '@emailjs/browser'
 // Type
 import type { FormEvent } from 'react'
-import Button from '@/components/input/core/Button'
-import Tagline from '@/components/data-display/core/Tagline'
 
 /**
 * The contact section of application
