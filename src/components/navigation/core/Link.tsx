@@ -1,23 +1,25 @@
 // Components
 import NextLink from 'next/link'
 // Config
-import { SIZES } from '@/modules/sizing/hooks/config'
+import { SIZES } from '@/modules/sizing/config'
 import { THEME } from '@/modules/theme/config'
 // Types
 import type { LinkProps } from '@/types/navigation'
+import { SizeStyleConfig } from '@/types/sizing'
+import { ThemeStyleConfig } from '@/types/theme'
 
-/** The link size styles configuration */
-const linkSizeStyles = Object.freeze({
+/** The link size style configuration */
+const linkSizeStyles: SizeStyleConfig = {
   sm: 'text-sm',
   md: 'text-lg',
-  lg: 'text-md'
-})
+  lg: 'text-xl'
+}
 
-/** The link theme styles configuration */
-const linkThemeStyles = Object.freeze({
+/** The link theme style configuration */
+const linkThemeStyles: ThemeStyleConfig = {
   primary: 'text-sky-700 hover:text-sky-500',
-  secondary: 'text-zinc-700 hover:text-zinc-500'
-})
+  secondary: 'text-zinc-700 hover:text-sky-500'
+}
 
 /**
  * A simple link component for navigation

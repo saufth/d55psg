@@ -1,11 +1,12 @@
 // Components
 import CallToAction from '../navigation/LinkToAction'
 import Image from 'next/image'
+import LinkEmail from '../navigation/LinkEmail'
 import NextLink from 'next/link'
 // Config
 import { logoAlt } from '@/modules/data-display/config'
 import { NAV_LIST } from '@/modules/navigation/config'
-import { copyright, email } from '@/modules/app/config'
+import { copyright } from '@/modules/app/config'
 
 /**
  * The footer section of application
@@ -15,14 +16,8 @@ export default function Footer () {
   return (
     <footer className='max-w-8xl px-5 md:px-10 pt-8 pb-12 mx-auto flex flex-col-reverse md:flex-col gap-y-8 border-t border-zinc-300'>
       <div className='w-full mx-auto flex flex-col md:flex-row-reverse justify-center md:justify-between items-center gap-y-8'>
-        <div className='underline md:text-xl'>
-          <NextLink
-            href='mailto:contacto@d55psg.com'
-            target='_blank'
-            rel='noreferrer'
-          >
-            {email}
-          </NextLink>
+        <div className='md:text-xl'>
+          <LinkEmail />
         </div>
         <div className='md:hidden'>
           <CallToAction />

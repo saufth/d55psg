@@ -6,5 +6,5 @@ export interface AboutProps extends HeaderProps {
   /** Section id */
   id: string
   /** Section showcases */
-  showcases: Readonly<ShowcaseProps[]>
+  showcases: ReadonlyArray<Readonly<ShowcaseProps>>
 }

@@ -8,11 +8,13 @@ import useDimensions from '../../modules/sizing/hooks/useDimensions'
 import { motion } from 'framer-motion'
 // Config
 import { NAV, navAriaLabel } from '@/modules/navigation/config'
+import { OC_STATE } from '@/modules/input/config'
 // Types
 import type { MenuProps } from '@/types/navigation'
+import type { OCState } from '@/types/input'
 
 /** Background animation variants */
-const backgroundVariants = {
+const backgroundVariants: Record<OCState, any> = {
   open: (width = 1366) => ({
     clipPath: `circle(${width * 2}px at 100% 0px)`,
     opacity: 1,
@@ -35,7 +37,7 @@ const backgroundVariants = {
 }
 
 /** Nav animation variants */
-const navVariants = {
+const navVariants: Record<OCState, any> = {
   open: {
     opacity: 1,
     height: '100vh',
@@ -49,12 +51,6 @@ const navVariants = {
   }
 }
 
-/** Menu state configuration */
-const MENU_STATE = Object.freeze({
-  open: 'open',
-  closed: 'closed'
-})
-
 /**
  * The main menu component of the application
  * @returns The Menu component
@@ -66,7 +62,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
   return (
     <motion.div
       initial={false}
-      animate={isOpen ? MENU_STATE.open : MENU_STATE.closed}
+      animate={isOpen ? OC_STATE.open : OC_STATE.closed}
       custom={width}
     >
       <motion.nav

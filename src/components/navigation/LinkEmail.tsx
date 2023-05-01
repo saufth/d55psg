@@ -2,7 +2,6 @@
 import Link from './core/Link'
 // Config
 import { email } from '@/modules/app/config'
-import { SIZES } from '@/modules/sizing/hooks/config'
 import { THEME } from '@/modules/theme/config'
 
 /** The email hypertext reference */
@@ -17,7 +16,7 @@ export default function LinkEmail () {
     <Link
       href={mailto}
       theme={THEME.secondary}
-      size={SIZES.lg}
+      underline
     >
       {email}
     </Link>

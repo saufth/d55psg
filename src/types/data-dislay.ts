@@ -2,12 +2,6 @@
 import { Parent } from './layout'
 import type { Dimensionable, SizeProps } from './sizing'
 
-/** Generic key and value list type */
-export interface List<T> {
-  /** Item list */
-  [key: string]: T
-}
-
 /** Header properties */
 export interface HeaderProps {
   /** Header heading */
@@ -18,8 +12,11 @@ export interface HeaderProps {
   tagline?: string
 }
 
-/** Header list */
-export type HeaderList = List<HeaderProps>
+/** Used for header list */
+export type HeaderList = Record<string, HeaderProps>
+
+/** Used for header list configuration */
+export type HeaderListConfig = Readonly<Record<string, Readonly<HeaderProps>>>
 
 /** Image properties */
 export interface ImageProps extends Dimensionable {
@@ -32,7 +29,7 @@ export interface ImageProps extends Dimensionable {
 /** The Card component porperties */
 export interface CardProps extends HeaderProps {
   /** The image properties */
-  image: ImageProps
+  image: Readonly<ImageProps>
 }
 
 /** Showcase component props */

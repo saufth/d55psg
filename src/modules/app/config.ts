@@ -1,5 +1,5 @@
 // Types
-import type { HeaderList } from '@/types/data-dislay'
+import type { HeaderListConfig } from '@/types/data-dislay'
 
 /** Node enviroment mode */
 export const env = process.env.NODE_ENV
@@ -22,8 +22,11 @@ export const organizationSlogan = `${organization} ${slogan}`
 /** The head desciption of the application */
 export const description = 'Escala tu empresa al siguiente nivel con estrategias y tácticas innovadoras'
 
+/** The email of the organizacion */
+export const email = 'contacto@d55psg.com'
+
 /** Organization services */
-export const SERVICES: HeaderList = Object.freeze({
+export const SERVICES: HeaderListConfig = {
   consulting: {
     heading: 'Consultoria en estrategias de negocio',
     description: 'Nuestro servicio de consultoria en estrategias de negocio está diseñado para facilitar el alcance de ese objetivo deseado de forma más eficiente y productiva posible en pro de tu empresa.'
@@ -48,10 +51,10 @@ export const SERVICES: HeaderList = Object.freeze({
     heading: 'Segunda opinión experta',
     description: 'Nuestros servicios de segunda opinión experta te proporcionarán una evaluación independiente y objetiva de cualquier aspecto de tu negocio, ayudándote a validar o cuestionar decisiones importantes y a tomar medidas efectivas para optimizar el rendimiento empresarial.'
   }
-})
+}
 
 /** Organization values */
-export const VALUES: HeaderList = Object.freeze({
+export const VALUES: HeaderListConfig = {
   excellence: {
     heading: 'Excelencia',
     description: 'Nos esforzamos por alcanzar la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta el servicio al cliente.'
@@ -80,19 +83,13 @@ export const VALUES: HeaderList = Object.freeze({
     heading: 'Crecimiento personal y profesional',
     description: 'Nos comprometemos a proporcionar un ambiente de trabajo que promueva el crecimiento personal y profesional de nuestros empleados.'
   }
-})
-
-/** The email of the organizacion */
-export const email = 'contacto@d55psg.com'
-
-/** Current year */
-const currentYear = new Date().getFullYear()
+}
 
 /** The copyright of the application */
-export const copyright = `Copyright ${currentYear} ${organizationSlogan}. All rights reserved.`
+export const copyright = `Copyright ${new Date().getFullYear()} ${organizationSlogan}. All rights reserved.`
 
 /** The keyword list of the application */
-export const KEYWORDS = Object.freeze([
+export const KEYWORDS: ReadonlyArray<string> = [
   organization,
   'd55psg group',
   'd55 professional service group',
@@ -123,7 +120,7 @@ export const KEYWORDS = Object.freeze([
   'coaching de negocios',
   'coaching empresarial',
   'servicios de coaching empresarial'
-])
+]
 
 /** The keyword list as string */
 export const keywords = String(KEYWORDS)
@@ -135,7 +132,7 @@ export const coverImageUrl = `${baseUrl}cover.jpg`
 export const twitter = '@d55psg'
 
 /** Google seach scheme */
-export const googleSearchSchema = Object.freeze({
+export const googleSearchSchema = {
   '@context': 'https://schema.org/',
   '@graph': [
     {
@@ -167,4 +164,4 @@ export const googleSearchSchema = Object.freeze({
       inLanguage: 'es-MX'
     }
   ]
-})
+} as const

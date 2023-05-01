@@ -1,6 +1,3 @@
-// Types
-import type { List } from './data-dislay'
-
 /** Used to define a size property */
 export type Size = 'sm' | 'md' | 'lg'
 
@@ -11,7 +8,10 @@ export interface SizeProps {
 }
 
 /** Used for size configuration */
-export type SizeList = List<Size>
+export type SizeConfig = Readonly<Record<Size, Size>>
+
+/** Used for size styles configuration */
+export type SizeStyleConfig = Readonly<Record<Size, string>>
 
 /** Define width and height properties  */
 export interface Dimensionable {

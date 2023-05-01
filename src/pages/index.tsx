@@ -19,13 +19,13 @@ import type { CardProps, ShowcaseProps } from '@/types/data-dislay'
 export const heroDescription = 'Desarrollamos estrategias y tácticas productivas y autosustentables a corto, mediano y largo plazo.'
 
 /** The solution image size */
-export const SOLUTION_IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
+export const SOLUTION_IMG_SIZE: Readonly<Dimensionable> = {
   width: 620,
   height: 467
-})
+}
 
 /** The solutions section configuration */
-export const SOLUTIONS_CONFIG: Readonly<CardProps[]> = Object.freeze([
+export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
   {
     heading: SERVICES.consulting.heading,
     description: SERVICES.consulting.description,
@@ -80,15 +80,15 @@ export const SOLUTIONS_CONFIG: Readonly<CardProps[]> = Object.freeze([
       ...SOLUTION_IMG_SIZE
     }
   }
-])
+]
 /** The size of the image */
-export const VALUES_IMG_SIZE: Readonly<Dimensionable> = Object.freeze({
+export const VALUES_IMG_SIZE: Readonly<Dimensionable> = {
   width: 500,
   height: 500
-})
+}
 
 /** Our values section configuration */
-export const VALUES_CONFIG: Readonly<ShowcaseProps[]> = Object.freeze([
+export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
   {
     heading: VALUES.excellence.heading,
     description: VALUES.excellence.description,
@@ -152,7 +152,7 @@ export const VALUES_CONFIG: Readonly<ShowcaseProps[]> = Object.freeze([
       ...VALUES_IMG_SIZE
     }
   }
-])
+]
 
 /**
 * The Home page of the application

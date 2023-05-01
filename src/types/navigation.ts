@@ -1,6 +1,5 @@
 // Types
 import type { Actionable } from './input'
-import type { List } from './data-dislay'
 import type { Parent } from './layout'
 import type { Themeable } from './theme'
 import type { Size } from './sizing'
@@ -38,7 +37,7 @@ export interface LinkProps extends Parent<string>, Themeable {
 }
 
 /** Used for navigation configuration */
-export type Navigable = List<LinkProps>
+export type NavConfig = Readonly<Record<string, Readonly<LinkProps>>>
 
 /** The link button component properties */
 export interface LinkButtonProps extends LinkProps, Themeable {}
