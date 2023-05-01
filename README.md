@@ -36,7 +36,7 @@ We can express the above image with the following structure:
 
 ```
 - src
-  - app               (app)
+  - components/app    (app)
   - core              (core)
   - components        (domain)
   - modules           (domain)
@@ -45,24 +45,25 @@ We can express the above image with the following structure:
 
 ### App
 
-Contains code that is being used by the special <code>pages/_app.tsx</code> NextJS file, like:
+Contains components that is being used by the special <code>pages/_app.tsx</code> NextJS file, like:
 
-- Components
+- Layouts
 - The store of the global state
-- Business logic
-- Configuration
+- Scripts
 - And more...
 
 We could develop our folder structure in this way:
 
 ```
 - src
-  - app
-    - components
-    - config
-    - store
+  - components/app
+    - AppLayout.tsx
+    - AppProvider.tsx
+    - GoogleSeacrchScript.tsx
     - ...
 ```
+
+I prefer keep the components on a single folder, using the vertical slice philosofy, the <ins>app</ins> components can contain and export configuration data. Some configuration data is allowed on the <code>modules/app</code> folder, this folder is part of the <ins>domain</ins> layer and its used for <ins>domain</ins> and <ins>pages</ins> layers.
 
 ### Core
 
@@ -79,7 +80,6 @@ For example:
 - The database connector
 - The utils for authentification
 - The email provider
-- The reusable UI components not related to any domain (ex. Button, Icons, List)
 - And more...
 
 The <ins>core</ins> layer provides the <ins>domain</ins> with the necessary tools for the application to work, for example, authenticating, querying the DB, or sending emails. But does not know how the consumer uses these tools.
@@ -89,13 +89,9 @@ We could develop our folder structure in this way:
 ```
 - src
   - core
-    - database
-      - connector.ts
-      - ...
-    - auth
-      - auth.ts
-    - email
-      - sendEmail.ts
+    - database.ts
+    - auth.ts
+    - mailing.ts
     - ...
 ```
 
@@ -151,12 +147,17 @@ We could develop our folder structure in this way:
 ```
 - src
   - components
-    - search
-      - Search.tsx
-      - SearchSuggestions.tsx
+    - input
+      - core
+        - Button.tsx
+      - CallToAction.tsx
     - navigation
-      - Navbar.tsx
+      - core
+        - Link.tsx
+      - Menu.tsx
 ```
+
+The components folder can contain a core folder for each module, this contain small and reutilizable components used for create complex componentes out of core folders and pages, such like atomic design pattern: atoms (components/core) -> molecules (components) -> organism (pages).
 
 ### Pages
 
@@ -170,8 +171,10 @@ We could develop our folder structure in this way:
     - api
       - Search
         - [keyword].ts
-      - products
-        - [id].tsx
+    - _app.tsx
+    - index.tsx
+    - product
+      - [id].tsx
 ```
 
 ### Imports between Layers
@@ -220,19 +223,23 @@ EsLint can help us by adding the following configuration, can automatically warn
         },
         {
           "target": "./src/modules",
+          "from": "./src/components"
+        },
+        {
+          "target": "./src/modules",
           "from": "./src/pages"
         },
         {
           "target": "./src/core",
-          "from": "./src/app"
+          "from": "./src/components/app"
         },
         {
           "target": "./src/components",
-          "from": "./src/app"
+          "from": "./src/components/app"
         },
         {
           "target": "./src/modules",
-          "from": "./src/app"
+          "from": "./src/components/app"
         }
       ]
     }
