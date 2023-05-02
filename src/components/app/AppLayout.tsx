@@ -31,7 +31,14 @@ export default function AppLayout ({ children } : Parent) {
   return (
     <>
       <Head>
+        <meta http-equiv='content-language' content='en-mx' />
         <title>{title}</title>
+        <link rel='canonical' href={baseUrl} />
+        <meta name='author' content='Sauftdev' />
+        <meta name='description' content={description} />
+        <meta name='keywords' content={keywords} />
+        <meta name='theme-color' content='#888888' />
+        <meta name='robots' content='index, follow' />
         <link rel='icon' href='/favicon.ico' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
@@ -39,10 +46,6 @@ export default function AppLayout ({ children } : Parent) {
         <link rel='icon' type='image/png' sizes='512x512' href='/android-chrome-512x512.png' />
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
         <link rel='manifest' href='/site.webmanifest' />
-        <link rel='canonical' href={baseUrl} />
-        <meta name='theme-color' content='#003A70' />
-        <meta name='description' content={description} />
-        <meta name='keywords' content={keywords} />
         <meta property='og:locale' content='es_MX' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content={organizationSlogan} />
@@ -54,11 +57,17 @@ export default function AppLayout ({ children } : Parent) {
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='640' />
         <meta property='og:image:type' content='image/jpeg' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content={organizationSlogan} />
-        <meta name='twitter:description' content={description} />
-        <meta name='twitter:site' content={twitter} />
-        <meta name='twitter:image' content={coverImageUrl} />
+        {twitter !== ''
+          ? (
+            <>
+              <meta name='twitter:card' content='summary_large_image' />
+              <meta name='twitter:title' content={organizationSlogan} />
+              <meta name='twitter:description' content={description} />
+              <meta name='twitter:site' content={twitter} />
+              <meta name='twitter:image' content={coverImageUrl} />
+            </>
+            )
+          : null}
       </Head>
       <Navbar />
       <main>

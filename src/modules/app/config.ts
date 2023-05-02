@@ -126,4 +126,4 @@ export const keywords = String(KEYWORDS)
 export const coverImageUrl = `${baseUrl}cover.jpg`
 
 /** Twitter account */
-export const twitter = '@d55psg'
+export const twitter: string = ''
