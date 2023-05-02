@@ -1,5 +1,5 @@
 // Config
-import { organizationAlt } from '../app/config'
+import { organizationSlogan } from '../app/config'
 // Types
 import type { NavConfig } from '@/types/navigation'
 
@@ -13,11 +13,11 @@ export const NAV: NavConfig = {
     children: 'Soluciones',
     href: '/#solutions'
   },
-  strategy: {
+  values: {
     children: 'Valores',
     href: '/#values'
   },
-  why: {
+  history: {
     children: 'Historia',
     href: '/history'
   },
@@ -34,4 +34,4 @@ export const NAV_LIST = Object.values(NAV)
 export const linkToAction = NAV.contact
 
 /** The aria label for navigation directories */
-export const navAriaLabel = `${organizationAlt} directorio`
+export const navAriaLabel = `${organizationSlogan} directorio`

@@ -74,7 +74,7 @@ export default function Menu ({ isOpen, action }: MenuProps) {
           Menu
         </Tagline>
 
-        {[NAV.home, NAV.solutions, NAV.strategy, NAV.why].map((option, key) => (
+        {[NAV.home, NAV.solutions, NAV.values, NAV.history].map((option, key) => (
           <div className='text-3xl md:text-4xl' onClick={action} key={key}>
             <NextLink href={option.href}>
               {option.children}

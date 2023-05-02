@@ -7,6 +7,7 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 // Type
 import type { FormEvent } from 'react'
+import PageLayout from '@/components/layout/PageLayout'
 
 /**
 * The contact section of application
@@ -35,59 +36,61 @@ export default function ContactPage () {
   }
 
   return (
-    <section className='max-w-4xl px-[4%] my-32 mx-auto'>
-      <div className='px-10 md:px-[9%] space-y-12'>
-        <div className='space-y-3'>
-          <Tagline>
-            ¿Tomamos un café?
-          </Tagline>
-          <h1 className='text-5xl md:text-6xl'>
-            Pongamosnos en contacto
-          </h1>
+    <PageLayout page='contact'>
+      <section className='max-w-4xl px-[4%] my-32 mx-auto'>
+        <div className='px-10 md:px-[9%] space-y-12'>
+          <div className='space-y-3'>
+            <Tagline>
+              ¿Tomamos un café?
+            </Tagline>
+            <h1 className='text-5xl md:text-6xl'>
+              Pongamosnos en contacto
+            </h1>
+          </div>
+          <form
+            className='space-y-8'
+            onSubmit={sendEmail}
+            ref={formRef}
+          >
+            <div>
+              <input
+                className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
+                type='text'
+                name='contact_name'
+                id='contact_name'
+                placeholder='Tu nombre'
+                required
+              />
+            </div>
+            <div>
+              <input
+                className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
+                type='email'
+                name='contact_email'
+                id='contact_email'
+                placeholder='Tu Email'
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
+                name='contact_description'
+                id='contact_description'
+                rows={1}
+                placeholder='Cuentanos sobre tu proyecto'
+                defaultValue=''
+                required
+              />
+            </div>
+            <div className='pt-6 flex justify-center'>
+              <Button type='submit'>
+                Enviar
+              </Button>
+            </div>
+          </form>
         </div>
-        <form
-          className='space-y-8'
-          onSubmit={sendEmail}
-          ref={formRef}
-        >
-          <div>
-            <input
-              className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
-              type='text'
-              name='contact_name'
-              id='contact_name'
-              placeholder='Tu nombre'
-              required
-            />
-          </div>
-          <div>
-            <input
-              className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
-              type='email'
-              name='contact_email'
-              id='contact_email'
-              placeholder='Tu Email'
-              required
-            />
-          </div>
-          <div>
-            <textarea
-              className='w-full px-4 py-3 bg-zinc-200 rounded-xl resize-none'
-              name='contact_description'
-              id='contact_description'
-              rows={1}
-              placeholder='Cuentanos sobre tu proyecto'
-              defaultValue=''
-              required
-            />
-          </div>
-          <div className='pt-6 flex justify-center'>
-            <Button type='submit'>
-              Enviar
-            </Button>
-          </div>
-        </form>
-      </div>
-    </section>
+      </section>
+    </PageLayout>
   )
 }

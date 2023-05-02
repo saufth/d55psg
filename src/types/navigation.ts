@@ -4,6 +4,15 @@ import type { Parent } from './layout'
 import type { Themeable } from './theme'
 import type { Size } from './sizing'
 
+/** The main routes for pages */
+export type PageRoute = 'home' | 'history' | 'contact'
+
+/** The main routes for sections */
+export type SectionRoute = 'solutions' | 'values'
+
+/** The main routes for application */
+export type AppRoute = PageRoute | SectionRoute
+
 /** Specifes where to open the linked document */
 export type LinkTarget = '_blank' | '_self' | '_parent' | '_top' | 'framename'
 
@@ -22,10 +31,14 @@ export type LinkRel = 'alternate'
   | 'search'
   | 'tag'
 
-/** Link properties */
-export interface LinkProps extends Parent<string>, Themeable {
+/** Navegable properties */
+export interface Navigable extends Required<Parent<string>> {
   /** Reference to redirect */
   href: string
+}
+
+/** Link properties */
+export interface LinkProps extends Navigable, Themeable {
   /** Link target property */
   target?: LinkTarget
   /** Link rel property */
@@ -37,7 +50,7 @@ export interface LinkProps extends Parent<string>, Themeable {
 }
 
 /** Used for navigation configuration */
-export type NavConfig = Readonly<Record<string, Readonly<LinkProps>>>
+export type NavConfig = Readonly<Record<AppRoute, Readonly<Required<Navigable>>>>
 
 /** The link button component properties */
 export interface LinkButtonProps extends LinkProps, Themeable {}

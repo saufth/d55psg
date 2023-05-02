@@ -39,7 +39,7 @@ export default function Navbar () {
             />
           </NextLink>
 
-          {[NAV.solutions, NAV.strategy, NAV.why].map(({ children, href }, key) => {
+          {[NAV.solutions, NAV.values, NAV.history].map(({ children, href }, key) => {
             return (
               <div className='hidden lg:block' key={key}>
                 <Link href={href} size='sm' theme={THEME.secondary}>

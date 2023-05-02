@@ -2,6 +2,7 @@
 import About from '@/components/sections/About'
 import Card from '@/components/data-display/Card'
 import Image from 'next/image'
+import PageLayout from '@/components/layout/PageLayout'
 import Tagline from '@/components/data-display/core/Tagline'
 // Config
 import {
@@ -147,7 +148,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
 */
 export default function HomePage () {
   return (
-    <>
+    <PageLayout page='home'>
       <section className='w-full mt-24 mb-52 sm:mb-96 md:mb-6'>
         <div className='max-w-8xl mx-auto px-[4%]'>
           <div className='bg-blue-100 rounded-[30px]'>
@@ -215,6 +216,6 @@ export default function HomePage () {
         tagline='Nuestros valores'
         showcases={VALUES_CONFIG}
       />
-    </>
+    </PageLayout>
   )
 }
