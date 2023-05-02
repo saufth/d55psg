@@ -31,8 +31,6 @@ export default function AppLayout ({ children } : Parent) {
   return (
     <>
       <Head>
-        <meta charSet='utf-8' />
-        <meta content='width=device-width, initial-scale=1' name='viewport' />
         <title>{title}</title>
         <link rel='icon' href='/favicon.ico' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
