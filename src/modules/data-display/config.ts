@@ -1,5 +1,5 @@
 // Config
 import { organizationSlogan } from '../app/config'
 
-// Config
+/** The logotype image alternative information */
 export const logoAlt = `${organizationSlogan} logotype`
