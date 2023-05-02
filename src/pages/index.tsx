@@ -27,8 +27,7 @@ export const SOLUTION_IMG_SIZE: Readonly<Dimensionable> = {
 /** The solutions section configuration */
 export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
   {
-    heading: SERVICES.consulting.heading,
-    description: SERVICES.consulting.description,
+    ...SERVICES.consulting,
     image: {
       name: 'consulting.jpg',
       alt: `${organizationAlt} ${SERVICES.consulting.heading}`,
@@ -36,8 +35,7 @@ export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
     }
   },
   {
-    heading: SERVICES.model.heading,
-    description: SERVICES.model.description,
+    ...SERVICES.model,
     image: {
       name: 'business-model.jpg',
       alt: `${organizationAlt} ${SERVICES.model.heading}`,
@@ -45,8 +43,7 @@ export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
     }
   },
   {
-    heading: SERVICES.strategy.heading,
-    description: SERVICES.strategy.description,
+    ...SERVICES.strategy,
     image: {
       name: 'business-strategy.jpg',
       alt: `${organizationAlt} ${SERVICES.strategy.heading}`,
@@ -54,8 +51,7 @@ export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
     }
   },
   {
-    heading: SERVICES.coaching.heading,
-    description: SERVICES.coaching.description,
+    ...SERVICES.coaching,
     image: {
       name: 'coaching.jpg',
       alt: `${organizationAlt} ${SERVICES.coaching.heading}`,
@@ -63,8 +59,7 @@ export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
     }
   },
   {
-    heading: SERVICES.study.heading,
-    description: SERVICES.study.description,
+    ...SERVICES.study,
     image: {
       name: 'market-study.jpg',
       alt: `${organizationAlt} ${SERVICES.study.heading}`,
@@ -72,8 +67,7 @@ export const SOLUTIONS_CONFIG: ReadonlyArray<Readonly<CardProps>> = [
     }
   },
   {
-    heading: SERVICES.opinion.heading,
-    description: SERVICES.opinion.description,
+    ...SERVICES.opinion,
     image: {
       name: 'second-opinion.jpg',
       alt: `${organizationAlt} ${SERVICES.opinion.heading}`,
@@ -90,8 +84,7 @@ export const VALUES_IMG_SIZE: Readonly<Dimensionable> = {
 /** Our values section configuration */
 export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
   {
-    heading: VALUES.excellence.heading,
-    description: VALUES.excellence.description,
+    ...VALUES.excellence,
     image: {
       name: 'excellence.svg',
       alt: `${organizationAlt} ${VALUES.excellence.heading}`,
@@ -99,8 +92,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
     }
   },
   {
-    heading: VALUES.integrity.heading,
-    description: VALUES.integrity.description,
+    ...VALUES.integrity,
     image: {
       name: 'integrity.svg',
       alt: `${organizationAlt} ${VALUES.integrity.heading}`,
@@ -108,8 +100,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
     }
   },
   {
-    heading: VALUES.innovation.heading,
-    description: VALUES.innovation.description,
+    ...VALUES.innovation,
     image: {
       name: 'innovation.svg',
       alt: `${organizationAlt} ${VALUES.innovation.heading}`,
@@ -117,8 +108,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
     }
   },
   {
-    heading: VALUES.commitment.heading,
-    description: VALUES.commitment.description,
+    ...VALUES.commitment,
     image: {
       name: 'commitment.svg',
       alt: `${organizationAlt} ${VALUES.commitment.heading}`,
@@ -126,8 +116,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
     }
   },
   {
-    heading: VALUES.teamwork.heading,
-    description: VALUES.teamwork.description,
+    ...VALUES.teamwork,
     image: {
       name: 'teamwork.svg',
       alt: `${organizationAlt} ${VALUES.teamwork.heading}`,
@@ -135,8 +124,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
     }
   },
   {
-    heading: VALUES.responsability.heading,
-    description: VALUES.responsability.description,
+    ...VALUES.responsability,
     image: {
       name: 'responsability.svg',
       alt: `${organizationAlt} ${VALUES.responsability.heading}`,
@@ -144,8 +132,7 @@ export const VALUES_CONFIG: ReadonlyArray<Readonly<ShowcaseProps>> = [
     }
   },
   {
-    heading: VALUES.growth.heading,
-    description: VALUES.growth.description,
+    ...VALUES.growth,
     image: {
       name: 'growth.svg',
       alt: `${organizationAlt} ${VALUES.growth.heading}`,
