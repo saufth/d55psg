@@ -8,12 +8,14 @@ import Head from 'next/head'
 import Navbar from '@/components/sections/Navbar'
 // Config
 import {
+  author,
   baseUrl,
   coverImageUrl,
   description,
   keywords,
   organizationAlt,
   organizationSlogan,
+  themeColor,
   twitter
 } from '../../modules/app/config'
 // Types
@@ -34,10 +36,10 @@ export default function AppLayout ({ children } : Parent) {
         <meta http-equiv='content-language' content='en-mx' />
         <title>{title}</title>
         <link rel='canonical' href={baseUrl} />
-        <meta name='author' content='Sauftdev' />
+        <meta name='author' content={author} />
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
-        <meta name='theme-color' content='#888888' />
+        <meta name='theme-color' content={themeColor} />
         <meta name='robots' content='index, follow' />
         <link rel='icon' href='/favicon.ico' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />

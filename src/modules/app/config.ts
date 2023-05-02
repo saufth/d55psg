@@ -1,6 +1,9 @@
 // Types
 import type { HeaderListConfig } from '@/types/data-dislay'
 
+/** The project author */
+export const author = 'Sauftdev'
+
 /** The base URL of the aplication */
 export const baseUrl = process.env.NEXT_PUBLIC_HOST
 
@@ -127,3 +130,6 @@ export const coverImageUrl = `${baseUrl}cover.jpg`
 
 /** Twitter account */
 export const twitter: string = ''
+
+/** Html theme color */
+export const themeColor = '#888888'
