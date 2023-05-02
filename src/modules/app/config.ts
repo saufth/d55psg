@@ -1,9 +1,6 @@
 // Types
 import type { HeaderListConfig } from '@/types/data-dislay'
 
-/** Node enviroment mode */
-export const env = process.env.NODE_ENV
-
 /** The base URL of the aplication */
 export const baseUrl = process.env.NEXT_PUBLIC_HOST
 
