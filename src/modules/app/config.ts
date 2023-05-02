@@ -5,7 +5,7 @@ import type { HeaderListConfig } from '@/types/data-dislay'
 export const env = process.env.NODE_ENV
 
 /** The base URL of the aplication */
-export const baseUrl = process.env.HOST
+export const baseUrl = process.env.NEXT_PUBLIC_HOST
 
 /** The name of the organization */
 export const organization = 'D55'
