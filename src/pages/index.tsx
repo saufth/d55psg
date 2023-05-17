@@ -1,5 +1,6 @@
 // Components
 import About from '@/components/sections/About'
+import CallToAction from '@/components/navigation/LinkToAction'
 import Card from '@/components/data-display/Card'
 import Image from 'next/image'
 import PageLayout from '@/components/layout/PageLayout'
@@ -208,6 +209,34 @@ export default function HomePage () {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className='px-5% py-24 md:py-32 flex flex-col items-center gap-y-12 md:gap-y-14'>
+        <Image
+          src='/images/d55psg-logo.svg'
+          alt={organizationSlogan}
+          className='w-auto h-16'
+          width={613}
+          height={271}
+        />
+        <div className='font-avenir-bold text-xl'>
+          Misión
+        </div>
+        <p className='max-w-5xl font-avenir-regular text-xl md:text-[27px] text-center md:leading-normal'>
+          La misión de D55PSG es proporcionar servicios de consultoría empresarial personalizados
+          para ayudar a nuestros clientes a alcanzar sus objetivos empresariales. Nos esforzamos
+          por entender las necesidades y desafíos de cada cliente para ofrecer soluciones
+          efectivas y duraderas que generen valor y mejoren su rentabilidad.
+        </p>
+        <div className='font-avenir-bold text-xl'>
+          Visión
+        </div>
+        <p className='max-w-5xl font-avenir-regular text-xl md:text-[27px] text-center md:leading-normal'>
+          Destacarnos en la industria de la consultoría empresarial por nuestro enfoque centrado
+          en el cliente, la calidad excepcional en el servicio y la capacidad para generar
+          resultados tangibles y sostenibles.
+        </p>
+        <CallToAction />
       </section>
 
       <About
